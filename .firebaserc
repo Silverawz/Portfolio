@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "portfolio-e5edc"
+  },
+  "targets": {
+    "portfolio-e5edc": {
+      "hosting": {
+        "Portfolio": [
+          "portfolio-e5edc"
+        ]
+      }
+    }
+  }
+}
