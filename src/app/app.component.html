@@ -1,13 +1,18 @@
-<h1>Portofolio is Working!</h1>
+<!-- javascript:void(0) -->
 
-<!-- Navbar-->
-<nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="logo">
-      <a href="#" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">A propos de moi</a>
-    </li>
-  </ul>
-</nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<a (click)="openNav()">Accéder au menu</a>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  ...
+</div>
