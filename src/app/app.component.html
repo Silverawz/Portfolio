@@ -18,10 +18,25 @@
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
-  <div id="home_page">
+  <div id="img_top">
     <img src="assets/img/space.jpg" id="img_space">
   </div>
-  <div>
-    <h1>This is the home page</h1>
+
+
+  <div id="home_page" *ngIf="currentSection == 1">
+    <h1>{{content[0]}}</h1>
   </div>
+
+  <div id="skills_main" *ngIf="currentSection == 2">
+    <h1>{{content[1]}}</h1>
+  </div>
+
+  <div id="projects_main" *ngIf="currentSection == 3">
+    <h1>{{content[2]}}</h1>
+  </div>
+
+  <div id="contact_main" *ngIf="currentSection == 4">
+    <h1>{{content[3]}}</h1>
+  </div>
+
 </div>
