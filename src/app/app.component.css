@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+  
+  
   /* The side navigation menu */
   .sidenav {
     height: 100%; /* 100% Full-height */
@@ -25,7 +28,7 @@
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     cursor: pointer;
-    color: #ffe600;
+    color: rgb(206, 153, 7);
   }
   
   /* Position and style the close button (top right corner) */
@@ -63,11 +66,41 @@
     height:100px;
   }
 
-  #home-1, #skills-2, #projects-3, #contact-4 {
-    color: #ffe600;
+  #home-0, #skills-1, #projects-2, #contact-3 {
+    /*color: #ffe600;*/
+    background-image: -webkit-linear-gradient(crimson 95%, rgb(255, 255, 255) 30%);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 100% 50px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation: stripes 2s linear infinite;
+    animation: stripes 2s linear infinite;
   }
 
   #flag{
     padding-top: 20px;
     padding-left:50px;
   }
+
+  @-webkit-keyframes stripes {
+    100% {
+      background-position: 0 -50px;
+    }
+  }
+  
+  @keyframes stripes {
+    100% {
+      background-position: 0 -50px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+ 

@@ -2,19 +2,19 @@
 
 
 <div id="mySidenav" class="sidenav">
-  <!--<a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>-->
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
   <img src="assets/img/logo.jpg" id="logo">
-  <a (click)="changeSection(1)" id="{{ 'home-' + currentSection }}">{{home}}</a>
-  <a (click)="changeSection(2)" id="{{ 'skills-' + currentSection }}">{{skills}}</a>
-  <a (click)="changeSection(3)" id="{{ 'projects-' + currentSection }}">{{projects}}</a>
-  <a (click)="changeSection(4)" id="{{ 'contact-' + currentSection }}">{{contact}}</a>
+  <a (click)="changeSection(0)" id="{{ 'home-' + currentSection }}">{{navbar[0]}}</a>
+  <a (click)="changeSection(1)" id="{{ 'skills-' + currentSection }}">{{navbar[1]}}</a>
+  <a (click)="changeSection(2)" id="{{ 'projects-' + currentSection }}">{{navbar[2]}}</a>
+  <a (click)="changeSection(3)" id="{{ 'contact-' + currentSection }}">{{navbar[3]}}</a>
   <a (click)="changeLanguage()" id="flag">
     <img src="{{ flag_path_img }}">
   </a>
 </div>
 
-<!-- Use any element to open the sidenav 
-<button (click)="openNav()">Accéder au menu</button>-->
+<!-- Use any element to open the sidenav -->
+<button (click)="openNav()">Accéder au menu</button>
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
@@ -23,19 +23,19 @@
   </div>
 
 
-  <div id="home_page" *ngIf="currentSection == 1">
+  <div id="home_page" *ngIf="currentSection == 0">
     <h1>{{content[0]}}</h1>
   </div>
 
-  <div id="skills_main" *ngIf="currentSection == 2">
+  <div id="skills_main" *ngIf="currentSection == 1">
     <h1>{{content[1]}}</h1>
   </div>
 
-  <div id="projects_main" *ngIf="currentSection == 3">
+  <div id="projects_main" *ngIf="currentSection == 2">
     <h1>{{content[2]}}</h1>
   </div>
 
-  <div id="contact_main" *ngIf="currentSection == 4">
+  <div id="contact_main" *ngIf="currentSection == 3">
     <h1>{{content[3]}}</h1>
   </div>
 
