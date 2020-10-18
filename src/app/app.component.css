@@ -46,10 +46,15 @@
     padding: 20px;
   }
   
+
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
   }
 
 
@@ -96,11 +101,63 @@
   }
 
 
+  .container_top{
+    /*visibility: hidden !important;*/
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(195, 211, 212);
+    height: 75px;
+  }
 
+  .btn-navbar{
+    height: 45px;
+    width: 65px;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom : 5px;
+    font-size: 15px;
+    color : rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+  }
 
-
-
-
-
-
+  .btn-navbar:hover{
+    background-color: rgb(255, 222, 131);
+  }
  
+  .title_container{
+    height: 55px;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+
+  
+
+  #burger {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  #title_section{
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    color : rgb(0, 0, 0);
+    font-family: "PT Serif","Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L",Garamond,"Apple Garamond","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",Georgia,serif;
+    border-radius : 2px;
+    animation: movingTopToBottom 0.8s linear;
+  }
+
+  @keyframes movingTopToBottom {
+    0% {
+      top: -80px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+

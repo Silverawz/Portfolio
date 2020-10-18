@@ -10,21 +10,15 @@ export class AppComponent implements OnInit {
   title = 'Portfolio';
   currentSection : Number; //0 home, 2 skills, 3 projets, 4 contact
   language_choosed : Number; //1 french, 2 english
-  navbar:String[] = new Array("Home","Skills","Projects","Projects");
+  title_section:String;
+  navbar:String[] = new Array("Home","Skills","Projects","Contact");
   flag_path_img:String;
-  content:String[] = new Array(" "," "," "," ");
+  content:String[][] = new Array(new Array ("","","","",""),new Array ("","","","","") ,new Array ("","","","","") ,new Array ("","","","",""));
 
   ngOnInit() {
-    this.flag_path_img = "assets/img/france-flag-icon-32.png";
-    this.currentSection = 0;
-    this.language_choosed = 2;
-    this.navbar[0] = this.navbar[0] + " ←"
-    this.content[0] = "Home page";
-    this.content[1] = "Skills page";
-    this.content[2] = "Projects page";
-    this.content[3] = "Contact page";
+    this.initializeContent();
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";        
+    document.getElementById("main").style.marginLeft = "250px";   
   }
 
   changeSection(selected){
@@ -45,6 +39,8 @@ export class AppComponent implements OnInit {
       this.currentSection = 1;
       this.navbar[0] = this.navbar[0] + " ←"; 
     }
+    this.title_section = this.navbar[this.currentSection.valueOf()];
+    this.title_section = this.title_section.substring(0, this.title_section.length - 1);
   }
 
   changeLanguage(){
@@ -59,6 +55,9 @@ export class AppComponent implements OnInit {
       this.resetDefaultValuesSelectedEnglish();
       this.addSelectedSection(this.currentSection);
     }
+    this.title_section = this.navbar[this.currentSection.valueOf()];
+    this.title_section = this.title_section.substring(0, this.title_section.length - 1);
+    this.initializeContentPage();
   }
 
   addSelectedSection(selected){
@@ -92,10 +91,64 @@ export class AppComponent implements OnInit {
   openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    
+    //document.getElementById("title_section").style.visibility = "hidden";
+    document.getElementById("btn-navbar").style.visibility = "hidden";
+    //document.getElementById("title_container").style.width = "0";
+   // document.getElementById("title_container").style.visibility = "hidden";
+
+   document.getElementById("title_container").style.marginLeft = "20%";
   }
 
   closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+    //document.getElementById("title_section").style.visibility = "visible";
+    document.getElementById("btn-navbar").style.visibility = "visible";
+    //document.getElementById("title_container").style.width = "100%";
+    //document.getElementById("title_container").style.visibility = "visible";
+
+    document.getElementById("title_container").style.marginLeft = "10%";
   } 
+
+  initializeContent(){
+    this.flag_path_img = "assets/img/france-flag-icon-32.png";
+    this.currentSection = 0;
+    this.language_choosed = 2;
+    this.title_section = "Home";
+    this.navbar[0] = this.navbar[0] + " ←";
+    this.initializeContentPage();
+  }
+
+  initializeContentPage(){
+    if(this.language_choosed == 1){
+      this.initializePageFrench();   
+    }
+    else if(this.language_choosed == 2){
+      this.initializePageEnglish();    
+    } else{
+      this.initializePageEnglish();
+    }
+  }
+
+  initializePageFrench(){
+      //accueil
+      this.content[0][0] = "Bienvenue sur mon portfolio!";
+      this.content[0][1] = "Je m'appelle Nicolas et je suis un développeur junior Fullstack.";
+      this.content[0][2] = "Je suis quelqu'un de passionné par l'informatique et la programmation.";
+      this.content[0][3] = "assets/img/france-flag-icon-32.png";
+      this.content[0][4] = "img2";
+      //competences
+      this.content[1][0] = "Page de compétences";
+      this.content[2][0] = "Page de projets perso";
+      this.content[3][0] = "Contactez moi";
+  }
+
+  initializePageEnglish(){
+    this.content[0][0] = "Home page";
+      this.content[1][0] = "Skills page";
+      this.content[2][0] = "Projects page";
+      this.content[3][0] = "Contact page";
+  }
+
 }

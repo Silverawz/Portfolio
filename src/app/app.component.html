@@ -2,41 +2,46 @@
 
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a class="closebtn" (click)="closeNav()">&times;</a>
   <img src="assets/img/logo.jpg" id="logo">
-  <a (click)="changeSection(0)" id="{{ 'home-' + currentSection }}">{{navbar[0]}}</a>
-  <a (click)="changeSection(1)" id="{{ 'skills-' + currentSection }}">{{navbar[1]}}</a>
-  <a (click)="changeSection(2)" id="{{ 'projects-' + currentSection }}">{{navbar[2]}}</a>
-  <a (click)="changeSection(3)" id="{{ 'contact-' + currentSection }}">{{navbar[3]}}</a>
+  <a (click)="changeSection(0)" id="{{ 'home-' + currentSection }}">{{ navbar[0] }}</a>
+  <a (click)="changeSection(1)" id="{{ 'skills-' + currentSection }}">{{ navbar[1] }}</a>
+  <a (click)="changeSection(2)" id="{{ 'projects-' + currentSection }}">{{ navbar[2] }}</a>
+  <a (click)="changeSection(3)" id="{{ 'contact-' + currentSection }}">{{ navbar[3] }}</a>
   <a (click)="changeLanguage()" id="flag">
     <img src="{{ flag_path_img }}">
   </a>
 </div>
 
+<div class="container_top">
 <!-- Use any element to open the sidenav -->
-<button (click)="openNav()">Accéder au menu</button>
+<button (click)="openNav()" class="btn-navbar" id="btn-navbar">
+  <div id="burger"></div>
+  <div id="burger"></div>
+  <div id="burger"></div>
+</button>
+
+<div class="title_container" id="title_container"><h1 id="title_section">{{ title_section }}</h1></div>
+</div>
+<!--
+<button (click)="openNav()" class="tw-block tw-full-width tw-interactable tw-interactable--default tw-interactable--hover-enabled tw-interactive" data-test-selector="rotate-arrow"><div class="tw-flex tw-pd-x-05"><div class="ScIconLayout-sc-1bgeryd-0 cFCmuf tw-icon"><div class="ScAspectRatio-sc-1sw3lwy-1 dNNaBC tw-aspect"><div class="ScAspectSpacer-sc-1sw3lwy-0 gkBhyN"></div><svg width="30px" height="100px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="ScIconSVG-sc-1bgeryd-1 cMQeyU"><g><path d="M13.5 14.5L9 10l4.5-4.5L12 4l-6 6 6 6 1.5-1.5z"></path></g></svg></div></div></div></button>
+-->
+
+
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
-  <div id="img_top">
-    <img src="assets/img/space.jpg" id="img_space">
+
+  <div id="main_layout">
+
+  <div id="content">
+    <h1>{{ content[currentSection.valueOf()][0] }}</h1>
+    <div id="content_1">{{ content[currentSection.valueOf()][1] }}</div>
+    <div id="content_2">{{ content[currentSection.valueOf()][2] }}</div>
+    <div id="content_3"><img src="{{ content[currentSection.valueOf()][3] }}"></div>
+    <div id="content_4">{{ content[currentSection.valueOf()][4] }}</div>
   </div>
 
-
-  <div id="home_page" *ngIf="currentSection == 0">
-    <h1>{{content[0]}}</h1>
-  </div>
-
-  <div id="skills_main" *ngIf="currentSection == 1">
-    <h1>{{content[1]}}</h1>
-  </div>
-
-  <div id="projects_main" *ngIf="currentSection == 2">
-    <h1>{{content[2]}}</h1>
-  </div>
-
-  <div id="contact_main" *ngIf="currentSection == 3">
-    <h1>{{content[3]}}</h1>
-  </div>
+</div>
 
 </div>
