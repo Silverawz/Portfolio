@@ -32,16 +32,117 @@
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
 
+
   <div id="main_layout">
 
   <div id="content">
-    <h1>{{ content[currentSection.valueOf()][0] }}</h1>
+    <h2 id="h2_content">{{ content[currentSection.valueOf()][0] }}</h2>
     <div id="content_1">{{ content[currentSection.valueOf()][1] }}</div>
-    <div id="content_2">{{ content[currentSection.valueOf()][2] }}</div>
+    <div id="content_2" style="color:red; font-size:18px">{{ content[currentSection.valueOf()][2] }}</div>
     <div id="content_3"><img src="{{ content[currentSection.valueOf()][3] }}"></div>
     <div id="content_4">{{ content[currentSection.valueOf()][4] }}</div>
   </div>
 
-</div>
+
+
+
+<div *ngIf="currentSection == 1" id="skills_section">
+
+  <div class="front_end">
+
+
+    <h2 class="small_title">Front-End</h2>
+
+      <div class="progressbar-container">
+
+        <div class="name_skills">HTML/CSS 95%</div>
+
+          <div class="progress">
+            <div class="progress-value-95-blue"></div>
+          </div>
+      
+      </div>  
+
+
+      <div class="progressbar-container">
+
+        <div class="name_skills">Javascript/Angular 75%</div>
+            
+          <div class="progress">
+            <div class="progress-value-75-blue"></div>
+          </div>
+
+      </div>
+
+  </div>
+
+
+
+  <div class="back_end">
+
+    
+
+    <h2 class="small_title">Back-End</h2>
+
+    <div class="progressbar-container">
+
+      <div class="name_skills">Java 95%</div>
+
+        <div class="progress">
+          <div class="progress-value-95-green"></div>
+        </div>
+
+    </div>
+
+    <div class="progressbar-container">
+    
+      <div class="name_skills">Spring 95%</div>
+
+      <div class="progress">
+        <div class="progress-value-75-green"></div>
+      </div>
+
+    </div>  
+
+  </div>
+
+
+
+  <div class="other">
+
+    <h2 *ngIf="language_choosed == 1" class="small_title">Plus</h2>
+    <h2 *ngIf="language_choosed == 2" class="small_title">More</h2>
+
+    <div class="progressbar-container">
+    
+      <div class="name_skills">Git 95%</div>
+
+      <div class="progress">
+        <div class="progress-value-95-orange"></div>
+      </div>
+
+    </div>
+    
+  </div>
 
 </div>
+</div>
+
+
+
+</div>
+<!--
+<div>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+  Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des 
+  morceaux de texte pour réaliser un livre spécimen de polices de texte. 
+  Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, 
+  sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de 
+  feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans 
+  des applications de mise en page de texte, comme Aldus PageMaker.</div>
+  <div>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+   Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des 
+   morceaux de texte pour réaliser un livre spécimen de polices de texte. 
+   Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, 
+   sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de 
+   feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans 
+   des applications de mise en page de texte, comme Aldus PageMaker.</div>-->

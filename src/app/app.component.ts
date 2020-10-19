@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   navbar:String[] = new Array("Home","Skills","Projects","Contact");
   flag_path_img:String;
   content:String[][] = new Array(new Array ("","","","",""),new Array ("","","","","") ,new Array ("","","","","") ,new Array ("","","","",""));
-
+  url:String = "assets/img/Hubble.-L-oeil-de-l-espace.jpg";
   ngOnInit() {
     this.initializeContent();
     document.getElementById("mySidenav").style.width = "250px";
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
         this.navbar[selected] = this.navbar[selected] + " ←"; 
       } else{     
         this.currentSection = 1;
-        this.navbar[0] = this.navbar[0] + " ←"; 
+        this.navbar[0] = this.navbar[0] + " ←";        
       }
     } else{
       this.currentSection = 1;
@@ -41,6 +41,19 @@ export class AppComponent implements OnInit {
     }
     this.title_section = this.navbar[this.currentSection.valueOf()];
     this.title_section = this.title_section.substring(0, this.title_section.length - 1);
+    this.changeLayoutColor();
+  }
+
+  changeLayoutColor(){
+    if(this.currentSection == 0){
+      document.getElementById("main").style.backgroundColor = "rgb(228, 206, 178)";
+    } else if(this.currentSection == 1){
+      document.getElementById("main").style.backgroundColor = "rgb(165, 140, 161)";
+    } else if(this.currentSection == 2){
+      document.getElementById("main").style.backgroundColor = "rgb(108, 193, 196)";
+    } else if(this.currentSection == 3){
+      document.getElementById("main").style.backgroundColor = "rgb(134, 190, 134)";
+    }    
   }
 
   changeLanguage(){
@@ -91,23 +104,14 @@ export class AppComponent implements OnInit {
   openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    
-    //document.getElementById("title_section").style.visibility = "hidden";
     document.getElementById("btn-navbar").style.visibility = "hidden";
-    //document.getElementById("title_container").style.width = "0";
-   // document.getElementById("title_container").style.visibility = "hidden";
-
    document.getElementById("title_container").style.marginLeft = "20%";
   }
 
   closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
-    //document.getElementById("title_section").style.visibility = "visible";
     document.getElementById("btn-navbar").style.visibility = "visible";
-    //document.getElementById("title_container").style.width = "100%";
-    //document.getElementById("title_container").style.visibility = "visible";
-
     document.getElementById("title_container").style.marginLeft = "10%";
   } 
 
@@ -134,21 +138,40 @@ export class AppComponent implements OnInit {
   initializePageFrench(){
       //accueil
       this.content[0][0] = "Bienvenue sur mon portfolio!";
-      this.content[0][1] = "Je m'appelle Nicolas et je suis un développeur junior Fullstack.";
-      this.content[0][2] = "Je suis quelqu'un de passionné par l'informatique et la programmation.";
+      this.content[0][1] = "Je m'appelle Nicolas Deroussen résidant sur Paris et je suis un développeur junior full-stack.";
+      this.content[0][2] = "Ce site est toujours en cours de construction.";
       this.content[0][3] = "assets/img/france-flag-icon-32.png";
-      this.content[0][4] = "img2";
+      this.content[0][4] = "";
       //competences
-      this.content[1][0] = "Page de compétences";
+      this.content[1][0] = "Mes compétences";
+      this.content[1][1] = "La rapidité du temps de chargement pour le site est primordiale.\r Le site doit aussi respecter les contraintes de tailles et se doit d'être entièrement responsive.\r L'érgonomie doit permettre à l'utilisateur d'être en confiance et de naviguer facilement.\r Ce site est entièrement réaliser en une seule pas, pas de transition d'urls nécessaires!";
+      this.content[1][2] = "Javascript/ angular";
+      this.content[1][3] = "assets/img/france-flag-icon-32.png";
+      this.content[1][4] = "MySQL";
+
+
+
+
       this.content[2][0] = "Page de projets perso";
       this.content[3][0] = "Contactez moi";
   }
 
   initializePageEnglish(){
-    this.content[0][0] = "Home page";
-      this.content[1][0] = "Skills page";
-      this.content[2][0] = "Projects page";
-      this.content[3][0] = "Contact page";
+    //home
+    this.content[0][0] = "Welcome to my portfolio!";
+    this.content[0][1] = "Hello, I'm Nicolas Deroussen currently living in Paris. I'm a junior full-stack web developer.";
+    this.content[0][2] = "This website is still under construction.";
+    this.content[0][3] = "assets/img/france-flag-icon-32.png";
+    this.content[0][4] = "";
+
+    this.content[1][0] = "Skills page";
+    this.content[1][1] = "Html/ css";
+    this.content[1][2] = "Javascript/ angular";
+    this.content[1][3] = "assets/img/france-flag-icon-32.png";
+    this.content[1][4] = "MySQL";
+
+    this.content[2][0] = "Projects page";
+    this.content[3][0] = "Contact page";
   }
 
 }

@@ -42,6 +42,7 @@
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
+    image-resolution: 500px;
     transition: margin-left .5s;
     padding: 20px;
   }
@@ -131,9 +132,8 @@
     margin-top: 15px;
     margin-left: 20%;
     margin-right: 10%;
+    transition: margin-left .5s;
   }
-
-  
 
   #burger {
     width: 35px;
@@ -161,3 +161,173 @@
     }
   }
 
+  #h2_content{
+    text-align: center;
+    position: relative;
+    color : rgb(23, 156, 40);
+    animation: movingTopToBottom_ 0.8s linear;
+  }
+
+  #content_1, #content_2, #content_3, #content_4{
+    position: relative;
+    color : rgb(0, 0, 0);
+    animation: movingTopToBottom_ 1.2s linear; 
+  }
+
+  @keyframes movingTopToBottom_ {
+    0% {
+      top: -400px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+
+
+  #main_layout{
+    
+  }
+
+  /*#main {
+    image-resolution: 500px;
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  */
+  
+  #main{
+    height: 800px;
+    background-color: rgb(228, 206, 178);
+  }
+
+  .progress {
+    background: rgb(0, 0, 0);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 1px;
+    display: flex;
+    height: 12px;
+    width: 100px;
+  }
+  
+  .progress-value-95-blue {
+    animation: load95 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: rgb(52, 231, 255);
+    height: 8px;
+    width: 0;
+  }
+  
+  .progress-value-75-blue {
+    animation: load75 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: rgb(52, 231, 255);
+    height: 8px;
+    width: 0;
+  }
+
+  .progress-value-95-green {
+    animation: load95 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: rgb(39, 201, 106);
+    height: 8px;
+    width: 0;
+  }
+  
+  .progress-value-75-green {
+    animation: load75 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: rgb(39, 201, 106);
+    height: 8px;
+    width: 0;
+  }
+
+  .progress-value-95-orange {
+    animation: load95 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: rgb(201, 85, 39);
+    height: 8px;
+    width: 0;
+  }
+
+  .progress-value-75-orange {
+    animation: load95 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: rgb(201, 85, 39);
+    height: 8px;
+    width: 0;
+  }
+
+
+  @keyframes load95 {
+    0% { width: 0; }
+    100% { width: 95%; }
+  }
+  
+  @keyframes load75 {
+    0% { width: 0; }
+    100% { width: 75%; }
+  }
+
+  #skills_section{
+    /* a remove en dessous*/
+    border-style:solid;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: rgb(255, 0, 0);
+
+
+
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:"box1 box2 box3";
+  }
+
+  .front_end{
+    grid-area: box1;
+    border-style:solid;
+    border-width: 3px;
+    border-radius: 4px;
+    border-color: black;
+  }
+
+  .back_end{
+    grid-area: box2;
+    border-style:solid;
+    border-width: 3px;
+    border-radius: 4px;
+    border-color: black;
+  }
+
+  .other{
+    grid-area: box3;
+    border-style:solid;
+    border-width: 3px;
+    border-radius: 4px;
+    border-color: black;
+  }
+
+  .small_title{
+    margin-left: 40%;
+    margin-right: 25%;
+    margin-bottom : 50px;
+  }
+
+  .progressbar-container{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top : 20px;
+  }
