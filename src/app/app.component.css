@@ -48,15 +48,7 @@
   }
   
 
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 18px;
-    }
-  }
+
 
 
   #img_space{
@@ -197,7 +189,8 @@
   
   #main{
     height: 800px;
-    background-color: rgb(228, 206, 178);
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(180deg, #7510F7 35%,rgb(255, 255, 255) 25%);
   }
 
   .progress {
@@ -252,7 +245,7 @@
     animation: load95 3s normal forwards;
     box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
-    background: rgb(201, 85, 39);
+    background:#7510F7;
     height: 8px;
     width: 0;
   }
@@ -278,14 +271,6 @@
   }
 
   #skills_section{
-    /* a remove en dessous*/
-    border-style:solid;
-    border-width: 1px;
-    border-radius: 1px;
-    border-color: rgb(255, 0, 0);
-
-
-
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
@@ -299,29 +284,39 @@
   .front_end{
     grid-area: box1;
     border-style:solid;
+    border-width: 1px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-color: rgb(114, 113, 113);
+    background: rgb(145,229,255);
+  }
+
+  .front_end:hover,.back_end:hover,.other:hover{
+    background: rgb(255, 255, 255);
     border-width: 3px;
-    border-radius: 4px;
-    border-color: black;
   }
 
   .back_end{
     grid-area: box2;
     border-style:solid;
-    border-width: 3px;
-    border-radius: 4px;
-    border-color: black;
+    border-width: 1px;
+    border-color: rgb(114, 113, 113);
+    background: rgb(145, 255, 178);
   }
 
   .other{
     grid-area: box3;
     border-style:solid;
-    border-width: 3px;
-    border-radius: 4px;
-    border-color: black;
+    border-width: 1px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-color: rgb(114, 113, 113);
+    background: rgb(248, 151, 113);
   }
 
   .small_title{
-    margin-left: 40%;
+    color: #7510F7;
+    margin-left: 34%;
     margin-right: 25%;
     margin-bottom : 50px;
   }
@@ -330,4 +325,29 @@
     margin-left: 30%;
     margin-right: 30%;
     margin-top : 20px;
+  }
+
+  .logo_skills{
+    margin-left : 30%;
+    border-style:solid;
+    border-width: 1px;
+    border-radius: 6px;
+    border-color:#7510F7;
+  }
+
+  .logo_skills:hover{
+    border-width: 2px;
+    border-color:#000000;
+  }
+
+
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+   .sidenav {
+     padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
   }
