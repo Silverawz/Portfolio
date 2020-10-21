@@ -35,17 +35,27 @@
 
   <div id="main_layout">
 
-    <div id="content">
-      <h2 id="h2_content">{{ content[currentSection.valueOf()][0] }}</h2>
-      <div id="content_1">{{ content[currentSection.valueOf()][1] }}</div>
-      <div id="content_2" style="color:red; font-size:18px">{{ content[currentSection.valueOf()][2] }}</div>
-      <div id="content_3"><img src="{{ content[currentSection.valueOf()][3] }}"></div>
-      <div id="content_4">{{ content[currentSection.valueOf()][4] }}</div>
+    <!-- Home -->
+    <div *ngIf="currentSection == 0" id="skills_section">
+      <div class="bubbles">
+        <img src="assets/img/bubble.png">
+        <img src="assets/img/bubble.png">
+        <img src="assets/img/bubble.png">
+        <img src="assets/img/bubble.png">
+        <img src="assets/img/bubble.png">
+        <img src="assets/img/bubble.png">
+        <img src="assets/img/bubble.png">
+      </div>
+      <h2>Welcome to my Portfolio</h2>
+      <h3>Developers make things unrealisable happend.</h3>
     </div>
+    <!-- Home -->
 
 
 
 
+
+    <!--Skills -->
     <div *ngIf="currentSection == 1" id="skills_section">
 
       <div class="front_end">
@@ -133,8 +143,9 @@
       </div>
 
     </div>
+    <!--Skills -->
 
-
+    <!--Projects -->
     <div *ngIf="currentSection == 2" id="projects_section">
 
       <div class="project1">
@@ -173,7 +184,7 @@
 
 
     </div>
-
+    <!--Projects -->
 
 
 
