@@ -284,34 +284,34 @@
   .front_end{
     grid-area: box1;
     border-style:solid;
-    border-width: 1px;
+    border-width: 0.3px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-color: rgb(114, 113, 113);
-    background: rgb(145,229,255);
-  }
-
-  .front_end:hover,.back_end:hover,.other:hover{
+    border-color:  rgb(216, 214, 214);
     background: rgb(255, 255, 255);
-    border-width: 3px;
   }
 
   .back_end{
     grid-area: box2;
     border-style:solid;
-    border-width: 1px;
-    border-color: rgb(114, 113, 113);
-    background: rgb(145, 255, 178);
+    border-width: 0.3px;
+    border-color: rgb(216, 214, 214);
+    background: rgb(255, 255, 255);
   }
 
   .other{
     grid-area: box3;
     border-style:solid;
-    border-width: 1px;
+    border-width: 0.3px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    border-color: rgb(114, 113, 113);
-    background: rgb(248, 151, 113);
+    border-color: rgb(216, 214, 214);
+    background: rgb(255, 255, 255);
+  }
+  
+  .front_end:hover,.back_end:hover,.other:hover{
+    background: rgb(255, 255, 255);
+    border-width: 3px;
   }
 
   .small_title{
@@ -329,10 +329,6 @@
 
   .logo_skills{
     margin-left : 30%;
-    border-style:solid;
-    border-width: 1px;
-    border-radius: 6px;
-    border-color:#7510F7;
   }
 
   .logo_skills:hover{
@@ -350,4 +346,84 @@
     .sidenav a {
       font-size: 18px;
     }
+  }
+
+  #projects_section{
+    border: 3px solid rgb(0, 0, 0);
+    border-left-color:white;
+    border-right-color:white;
+    border-bottom-color:white;
+    border-radius : 10px;
+    margin-top: 150px;
+    margin-left: 20%;
+    margin-right: 10%;
+    width: 60%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "project1" 
+    "project2";
+    transition: margin-left .5s;
+  }
+
+  .project1{
+    grid-area: project1;
+    border-style:solid;
+    border-width: 3px;
+    border-color:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+  .project2{
+    margin-top: 150px;
+    grid-area: project2;
+    border-style:solid;
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+  }
+
+  #slider{
+    width: 100%;
+    max-width: 1000px;
+    background: rgb(255, 253, 156);
+    border-style:solid;
+    border-width: 2px;
+    border-color: rgb(255, 208, 0);
+    overflow:hidden;
+  }
+
+  #slider figure{
+    position:relative;
+    width: 500%;
+    margin:0;
+    padding:0;
+    font-size:0;
+    left:0;
+    text-align:left;
+    animation: 20s slidy infinite;
+  }
+
+  .image_projects{
+    width: 20%;
+    height: 400px;
+    float:left;
+  }
+
+  @keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+  }
+
+  #small_title_project{
   }

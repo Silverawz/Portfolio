@@ -106,6 +106,8 @@ export class AppComponent implements OnInit {
     document.getElementById("main").style.marginLeft = "250px";
     document.getElementById("btn-navbar").style.visibility = "hidden";
     document.getElementById("title_container").style.marginLeft = "20%";
+    document.getElementById("projects_section").style.marginRight = "10%";
+    document.getElementById("projects_section").style.borderColor = "rgb(238, 233, 164)";
   }
 
   closeNav() {
@@ -113,6 +115,8 @@ export class AppComponent implements OnInit {
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("btn-navbar").style.visibility = "visible";
     document.getElementById("title_container").style.marginLeft = "10%";
+    document.getElementById("projects_section").style.marginRight = "20%";
+    document.getElementById("projects_section").style.borderColor = "rgb(255, 255, 255)";
   } 
 
   initializeContent(){
@@ -143,16 +147,22 @@ export class AppComponent implements OnInit {
       this.content[0][3] = "assets/img/france-flag-icon-32.png";
       this.content[0][4] = "";
       //competences
-      this.content[1][0] = "";
-      this.content[1][1] = "";
+      this.content[1][0] = "En tant que developpeur, il est important de posséder un arsenal de compétences élevées.";
+      this.content[1][1] = "Il faut sans cesse apprendre et se mettre à jour via une veille technologique.";
       this.content[1][2] = "";
       this.content[1][3] = "assets/img/france-flag-icon-32.png";
       this.content[1][4] = "";
+      //projets
+      this.content[2][0] = "Mon travail récent";
+      this.content[2][1] = "";
+      this.content[2][2] = "";
+      this.content[2][3] = "assets/img/france-flag-icon-32.png";
+      this.content[2][4] = "";
 
 
 
 
-      this.content[2][0] = "Page de projets perso";
+      
       this.content[3][0] = "Contactez moi";
   }
 
@@ -164,13 +174,20 @@ export class AppComponent implements OnInit {
     this.content[0][3] = "assets/img/france-flag-icon-32.png";
     this.content[0][4] = "";
 
-    this.content[1][0] = "";
-    this.content[1][1] = "";
+    this.content[1][0] = "As a developer, an high amount of skills is required to perform and be effective in most situations.";
+    this.content[1][1] = "Technological watch is as important as knowledge in IT. We must adapt and improve everyday, months and year with the newest technologies.";
     this.content[1][2] = "";
     this.content[1][3] = "assets/img/france-flag-icon-32.png";
     this.content[1][4] = "";
 
-    this.content[2][0] = "Projects page";
+    //projets
+    this.content[2][0] = "My Recent Work";
+    this.content[2][1] = "";
+    this.content[2][2] = "";
+    this.content[2][3] = "assets/img/france-flag-icon-32.png";
+    this.content[2][4] = "";
+
+
     this.content[3][0] = "Contact page";
   }
 

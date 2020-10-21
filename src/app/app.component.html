@@ -35,116 +35,154 @@
 
   <div id="main_layout">
 
-  <div id="content">
-    <h2 id="h2_content">{{ content[currentSection.valueOf()][0] }}</h2>
-    <div id="content_1">{{ content[currentSection.valueOf()][1] }}</div>
-    <div id="content_2" style="color:red; font-size:18px">{{ content[currentSection.valueOf()][2] }}</div>
-    <div id="content_3"><img src="{{ content[currentSection.valueOf()][3] }}"></div>
-    <div id="content_4">{{ content[currentSection.valueOf()][4] }}</div>
-  </div>
+    <div id="content">
+      <h2 id="h2_content">{{ content[currentSection.valueOf()][0] }}</h2>
+      <div id="content_1">{{ content[currentSection.valueOf()][1] }}</div>
+      <div id="content_2" style="color:red; font-size:18px">{{ content[currentSection.valueOf()][2] }}</div>
+      <div id="content_3"><img src="{{ content[currentSection.valueOf()][3] }}"></div>
+      <div id="content_4">{{ content[currentSection.valueOf()][4] }}</div>
+    </div>
 
 
 
 
-<div *ngIf="currentSection == 1" id="skills_section">
+    <div *ngIf="currentSection == 1" id="skills_section">
 
-  <div class="front_end">
-
-
-    <h2 class="small_title">Front-End</h2>
-
-    <img src="assets/img/logo_front-end.jpg" class="logo_skills">
+      <div class="front_end">
 
 
-      <div class="progressbar-container">
+        <h2 class="small_title">Front-End</h2>
 
-        <div class="name_skills">HTML/CSS 95%</div>
-
-          <div class="progress">
-            <div class="progress-value-95-blue"></div>
-          </div>
-      
-      </div>  
+        <img src="assets/img/logo_front-end.jpg" class="logo_skills">
 
 
-      <div class="progressbar-container">
+          <div class="progressbar-container">
 
-        <div class="name_skills">Javascript/Angular 75%</div>
-            
-          <div class="progress">
-            <div class="progress-value-75-blue"></div>
+            <div class="name_skills">HTML/CSS 95%</div>
+
+              <div class="progress">
+                <div class="progress-value-95-blue"></div>
+              </div>
+          
+          </div>  
+
+
+          <div class="progressbar-container">
+
+            <div class="name_skills">Javascript/Angular 75%</div>
+                
+              <div class="progress">
+                <div class="progress-value-75-blue"></div>
+              </div>
+
           </div>
 
       </div>
 
-  </div>
 
 
+      <div class="back_end">
 
-  <div class="back_end">
+        
 
-    
+        <h2 class="small_title">Back-End</h2>
 
-    <h2 class="small_title">Back-End</h2>
-
-    <img src="assets/img/logo_back-end.jpg" class="logo_skills">
+        <img src="assets/img/logo_back-end.jpg" class="logo_skills">
 
 
-    <div class="progressbar-container">
+        <div class="progressbar-container">
 
-      <div class="name_skills">Java 95%</div>
+          <div class="name_skills">Java 95%</div>
 
-        <div class="progress">
-          <div class="progress-value-95-green"></div>
+            <div class="progress">
+              <div class="progress-value-95-green"></div>
+            </div>
+
         </div>
 
-    </div>
+        <div class="progressbar-container">
+        
+          <div class="name_skills">Spring 95%</div>
 
-    <div class="progressbar-container">
-    
-      <div class="name_skills">Spring 95%</div>
+          <div class="progress">
+            <div class="progress-value-75-green"></div>
+          </div>
 
-      <div class="progress">
-        <div class="progress-value-75-green"></div>
+        </div>  
+
       </div>
 
-    </div>  
-
-  </div>
 
 
+      <div class="other">
 
-  <div class="other">
-    
-    <h2 class="small_title">Dev Tools</h2>
+        <h2 class="small_title">Dev Tools</h2>
 
-    <img src="assets/img/logo_more.jpg" class="logo_skills">
+        <img src="assets/img/logo_more.jpg" class="logo_skills">
 
-    <div class="progressbar-container">
-    
-      <div class="name_skills">Git 95%</div>
+        <div class="progressbar-container">
+        
+          <div class="name_skills">Git 95%</div>
 
-      <div class="progress">
-        <div class="progress-value-95-orange"></div>
+          <div class="progress">
+            <div class="progress-value-95-orange"></div>
+          </div>
+
+        </div>
+        
       </div>
 
     </div>
-    
+
+
+    <div *ngIf="currentSection == 2" id="projects_section">
+
+      <div class="project1">
+
+        <p style="color:black">Ce site a été crée pour répondre aux besoins d'associations sportives, il permet de diffuser des informations sur internet et de discuter via un forum</p>
+        <div id="slider">
+
+          <figure>
+            <img src="assets/img/1 (P12).jpg" class="image_projects">
+            <img src="assets/img/3 (P12).jpg" class="image_projects">
+            <img src="assets/img/4 (P12).jpg" class="image_projects">
+            <img src="assets/img/5 (P12).png" class="image_projects">
+            <img src="assets/img/1 (P12).jpg" class="image_projects">
+          </figure>
+          <h2 id="small_title_project">Site Web Association sportive (Rapide, responsive et user-friendly)</h2>
+          <a href="https://github.com/Silverawz/P12">Lien du repository github pour ce projet</a>
+        </div>
+      
+      </div>
+
+      <div class="project2">
+        
+        <div id="slider">
+          <figure>
+            <img src="assets/img/1 (P12).jpg" class="image_projects">
+            <img src="assets/img/3 (P12).jpg" class="image_projects">
+            <img src="assets/img/4 (P12).jpg" class="image_projects">
+            <img src="assets/img/5 (P12).png" class="image_projects">
+            <img src="assets/img/1 (P12).jpg" class="image_projects">
+          </figure>
+          <h2 id="small_title_project">Site Web Association sportive (Rapide, responsive et user-friendly)</h2>
+          <a href="https://github.com/Silverawz/P12">Lien du repository github pour ce projet</a>
+        </div>
+      
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
   </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-</div>
 
 
 
