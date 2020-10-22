@@ -13,7 +13,7 @@
   </a>
 </div>
 
-<div class="container_top">
+<div class="container_top" id="container_top">
 <!-- Use any element to open the sidenav -->
 <button (click)="openNav()" class="btn-navbar" id="btn-navbar">
   <div id="burger"></div>
@@ -36,7 +36,7 @@
   <div id="main_layout">
 
     <!-- Home -->
-    <div *ngIf="currentSection == 0" id="skills_section">
+    <div *ngIf="currentSection == 0" id="home_section">
       <div class="bubbles">
         <img src="assets/img/bubble.png">
         <img src="assets/img/bubble.png">
@@ -46,13 +46,15 @@
         <img src="assets/img/bubble.png">
         <img src="assets/img/bubble.png">
       </div>
-      <h2>Welcome to my Portfolio</h2>
-      <h3>Developers make things unrealisable happend.</h3>
+      <h2>Hi, i'm <g style="color:rgb(133, 0, 167)">Nicolas</g>. Nice to meet you.</h2>
+      <h3>I'm a full-stack junior web developper.</h3>
     </div>
     <!-- Home -->
 
 
-
+    <div *ngIf="currentSection == 1">
+      <h2 style="color:white">As a developer, we must learn as much as possible. Here are my current skills set which will increases over time. </h2>
+    </div>
 
 
     <!--Skills -->
@@ -68,7 +70,7 @@
 
           <div class="progressbar-container">
 
-            <div class="name_skills">HTML/CSS 95%</div>
+            <div class="name_skills">HTML     95%</div>
 
               <div class="progress">
                 <div class="progress-value-95-blue"></div>
@@ -79,7 +81,37 @@
 
           <div class="progressbar-container">
 
-            <div class="name_skills">Javascript/Angular 75%</div>
+            <div class="name_skills">CSS 95%</div>
+                
+              <div class="progress">
+                <div class="progress-value-95-blue"></div>
+              </div>
+
+          </div>
+
+          <div class="progressbar-container">
+
+            <div class="name_skills">Bootstrap 95%</div>
+                
+              <div class="progress">
+                <div class="progress-value-95-blue"></div>
+              </div>
+
+          </div>
+
+          <div class="progressbar-container">
+
+            <div class="name_skills">Javascript 75%</div>
+                
+              <div class="progress">
+                <div class="progress-value-75-blue"></div>
+              </div>
+
+          </div>
+
+          <div class="progressbar-container">
+
+            <div class="name_skills">Angular 75%</div>
                 
               <div class="progress">
                 <div class="progress-value-75-blue"></div>
@@ -102,7 +134,7 @@
 
         <div class="progressbar-container">
 
-          <div class="name_skills">Java 95%</div>
+          <div class="name_skills">Java EE 95%</div>
 
             <div class="progress">
               <div class="progress-value-95-green"></div>
@@ -112,13 +144,43 @@
 
         <div class="progressbar-container">
         
-          <div class="name_skills">Spring 95%</div>
+          <div class="name_skills">Spring Framework 95%</div>
+
+          <div class="progress">
+            <div class="progress-value-95-green"></div>
+          </div>
+
+        </div>  
+
+        <div class="progressbar-container">
+        
+          <div class="name_skills">Maven/Hibernate 95%</div>
+
+          <div class="progress">
+            <div class="progress-value-95-green"></div>
+          </div>
+
+        </div> 
+
+        <div class="progressbar-container">
+        
+          <div class="name_skills">Junit/Mockito  95%</div>
+
+          <div class="progress">
+            <div class="progress-value-95-green"></div>
+          </div>
+
+        </div> 
+
+        <div class="progressbar-container">
+        
+          <div class="name_skills">Integration Test/ Unitary Test 95%</div>
 
           <div class="progress">
             <div class="progress-value-75-green"></div>
           </div>
 
-        </div>  
+        </div>
 
       </div>
 
@@ -132,13 +194,51 @@
 
         <div class="progressbar-container">
         
-          <div class="name_skills">Git 95%</div>
+          <div class="name_skills">Git/Github/Gitlab 95%</div>
 
           <div class="progress">
             <div class="progress-value-95-orange"></div>
           </div>
 
         </div>
+
+        <div class="progressbar-container">
+        
+          <div class="name_skills">Jenkins CI 95%</div>
+
+          <div class="progress">
+            <div class="progress-value-95-orange"></div>
+          </div>
+
+        </div>
+
+
+        <div class="progressbar-container">
+        
+          <div class="name_skills">Docker 75%</div>
+
+          <div class="progress">
+            <div class="progress-value-75-orange"></div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
       </div>
 
@@ -187,11 +287,14 @@
     <!--Projects -->
 
 
+    <!-- Contact -->
+    <div *ngIf="currentSection == 3" id="contact_section">
+      <h2>You are free to contact me with my email : aaa@aol.fr</h2>
 
 
 
-
-
+    </div>
+    <!-- Contact -->
 
   </div>
 

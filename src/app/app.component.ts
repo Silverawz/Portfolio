@@ -8,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'Portfolio';
-  currentSection : Number; //0 home, 2 skills, 3 projets, 4 contact
+  currentSection : Number; //0 home, 1 skills, 2 projets, 3 contact
   language_choosed : Number; //1 french, 2 english
   title_section:String;
   navbar:String[] = new Array("Home","Skills","Projects","Contact");
   flag_path_img:String;
-  content:String[][] = new Array(new Array ("","","","",""),new Array ("","","","","") ,new Array ("","","","","") ,new Array ("","","","",""));
-  url:String = "assets/img/Hubble.-L-oeil-de-l-espace.jpg";
+
   ngOnInit() {
     this.initializeContent();
     document.getElementById("mySidenav").style.width = "250px";
@@ -41,19 +40,31 @@ export class AppComponent implements OnInit {
     }
     this.title_section = this.navbar[this.currentSection.valueOf()];
     this.title_section = this.title_section.substring(0, this.title_section.length - 1);
-    this.changeLayoutColor();
+    this.changeBackgroundImg();
   }
 
-  changeLayoutColor(){
+  changeBackgroundImg(){
     if(this.currentSection == 0){
-      document.getElementById("main").style.backgroundColor = "rgb(228, 206, 178)";
+      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background.png')";
     } else if(this.currentSection == 1){
-      document.getElementById("main").style.backgroundColor = "rgb(165, 140, 161)";
+      document.getElementById("container_top").style.backgroundColor = "rgb(32, 0, 30)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(219, 218, 218)";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/espace.JPG')";
     } else if(this.currentSection == 2){
-      document.getElementById("main").style.backgroundColor = "rgb(108, 193, 196)";
+      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/espace.JPG')";
     } else if(this.currentSection == 3){
-      document.getElementById("main").style.backgroundColor = "rgb(134, 190, 134)";
-    }    
+      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/fantasy.jpg')";
+    } else{
+      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background.png')";
+    }
   }
 
   changeLanguage(){
@@ -70,7 +81,6 @@ export class AppComponent implements OnInit {
     }
     this.title_section = this.navbar[this.currentSection.valueOf()];
     this.title_section = this.title_section.substring(0, this.title_section.length - 1);
-    this.initializeContentPage();
   }
 
   addSelectedSection(selected){
@@ -125,70 +135,6 @@ export class AppComponent implements OnInit {
     this.language_choosed = 2;
     this.title_section = "Home";
     this.navbar[0] = this.navbar[0] + " ←";
-    this.initializeContentPage();
-  }
-
-  initializeContentPage(){
-    if(this.language_choosed == 1){
-      this.initializePageFrench();   
-    }
-    else if(this.language_choosed == 2){
-      this.initializePageEnglish();    
-    } else{
-      this.initializePageEnglish();
-    }
-  }
-
-  initializePageFrench(){
-      //accueil
-      this.content[0][0] = "Bienvenue sur mon portfolio!";
-      this.content[0][1] = "Je m'appelle Nicolas Deroussen résidant sur Paris et je suis un développeur junior full-stack.";
-      this.content[0][2] = "Ce site est toujours en cours de construction.";
-      this.content[0][3] = "assets/img/france-flag-icon-32.png";
-      this.content[0][4] = "";
-      //competences
-      this.content[1][0] = "En tant que developpeur, il est important de posséder un arsenal de compétences élevées.";
-      this.content[1][1] = "Il faut sans cesse apprendre et se mettre à jour via une veille technologique.";
-      this.content[1][2] = "";
-      this.content[1][3] = "assets/img/france-flag-icon-32.png";
-      this.content[1][4] = "";
-      //projets
-      this.content[2][0] = "Mon travail récent";
-      this.content[2][1] = "";
-      this.content[2][2] = "";
-      this.content[2][3] = "assets/img/france-flag-icon-32.png";
-      this.content[2][4] = "";
-
-
-
-
-      
-      this.content[3][0] = "Contactez moi";
-  }
-
-  initializePageEnglish(){
-    //home
-    this.content[0][0] = "Welcome to my portfolio!";
-    this.content[0][1] = "Hello, I'm Nicolas Deroussen currently living in Paris. I'm a junior full-stack web developer.";
-    this.content[0][2] = "This website is still under construction.";
-    this.content[0][3] = "assets/img/france-flag-icon-32.png";
-    this.content[0][4] = "";
-
-    this.content[1][0] = "As a developer, an high amount of skills is required to perform and be effective in most situations.";
-    this.content[1][1] = "Technological watch is as important as knowledge in IT. We must adapt and improve everyday, months and year with the newest technologies.";
-    this.content[1][2] = "";
-    this.content[1][3] = "assets/img/france-flag-icon-32.png";
-    this.content[1][4] = "";
-
-    //projets
-    this.content[2][0] = "My Recent Work";
-    this.content[2][1] = "";
-    this.content[2][2] = "";
-    this.content[2][3] = "assets/img/france-flag-icon-32.png";
-    this.content[2][4] = "";
-
-
-    this.content[3][0] = "Contact page";
   }
 
 }
