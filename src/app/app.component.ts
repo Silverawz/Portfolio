@@ -30,6 +30,11 @@ export class AppComponent implements OnInit {
       if(selected == 0 || selected == 1 || selected == 2 || selected == 3){
         this.currentSection = selected;
         this.navbar[selected] = this.navbar[selected] + " ←"; 
+        if(selected == 2){
+          document.getElementById("main").style.height = "1400px";
+        } else{
+          document.getElementById("main").style.height = "800px";
+        }
       } else{     
         this.currentSection = 1;
         this.navbar[0] = this.navbar[0] + " ←";        
@@ -47,15 +52,15 @@ export class AppComponent implements OnInit {
     if(this.currentSection == 0){
       document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
       document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
-      document.getElementById("main").style.backgroundImage = "url('assets/img/background.png')";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background1.png')";
     } else if(this.currentSection == 1){
       document.getElementById("container_top").style.backgroundColor = "rgb(32, 0, 30)";
       document.getElementById("title_container").style.backgroundColor = "rgb(219, 218, 218)";
-      document.getElementById("main").style.backgroundImage = "url('assets/img/espace.JPG')";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background2.jpg')";
     } else if(this.currentSection == 2){
       document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
       document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
-      document.getElementById("main").style.backgroundImage = "url('assets/img/espace.JPG')";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background3.png')";
     } else if(this.currentSection == 3){
       document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
       document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
@@ -112,21 +117,34 @@ export class AppComponent implements OnInit {
   }
 
   openNav() {
+    if(document.body.contains(document.getElementById("mySidenav")))
     document.getElementById("mySidenav").style.width = "250px";
+    if(document.body.contains(document.getElementById("main")))
     document.getElementById("main").style.marginLeft = "250px";
+    if(document.body.contains(document.getElementById("btn-navbar")))
     document.getElementById("btn-navbar").style.visibility = "hidden";
+    if(document.body.contains(document.getElementById("title_container")))
     document.getElementById("title_container").style.marginLeft = "20%";
-    document.getElementById("projects_section").style.marginRight = "10%";
-    document.getElementById("projects_section").style.borderColor = "rgb(238, 233, 164)";
+    if(document.body.contains(document.getElementById("projects_section"))){
+      document.getElementById("projects_section").style.marginRight = "10%";
+      document.getElementById("projects_section").style.borderColor = "rgb(238, 233, 164)";
+    }
+
   }
 
   closeNav() {
+    if(document.body.contains(document.getElementById("mySidenav")))
     document.getElementById("mySidenav").style.width = "0";
+    if(document.body.contains(document.getElementById("main")))
     document.getElementById("main").style.marginLeft = "0";
+    if(document.body.contains(document.getElementById("btn-navbar")))
     document.getElementById("btn-navbar").style.visibility = "visible";
+    if(document.body.contains(document.getElementById("title_container")))
     document.getElementById("title_container").style.marginLeft = "10%";
-    document.getElementById("projects_section").style.marginRight = "20%";
-    document.getElementById("projects_section").style.borderColor = "rgb(255, 255, 255)";
+    if(document.body.contains(document.getElementById("projects_section"))){
+      document.getElementById("projects_section").style.marginRight = "20%";
+      document.getElementById("projects_section").style.borderColor = "rgb(255, 255, 255)";
+    }
   } 
 
   initializeContent(){
