@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
         this.currentSection = selected;
         this.navbar[selected] = this.navbar[selected] + " ←"; 
         if(selected == 2){
-          document.getElementById("main").style.height = "1400px";
+          document.getElementById("main").style.height = "1900px";
         } else{
           document.getElementById("main").style.height = "800px";
         }
@@ -50,25 +50,35 @@ export class AppComponent implements OnInit {
 
   changeBackgroundImg(){
     if(this.currentSection == 0){
-      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
-      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
+      document.getElementById("container_top").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("title_section").style.backgroundColor = "rgb(0, 122, 131)";
+      document.getElementById("footer_main").style.backgroundColor = "rgb(130, 213, 219)";
       document.getElementById("main").style.backgroundImage = "url('assets/img/background1.png')";
     } else if(this.currentSection == 1){
-      document.getElementById("container_top").style.backgroundColor = "rgb(32, 0, 30)";
-      document.getElementById("title_container").style.backgroundColor = "rgb(219, 218, 218)";
+      document.getElementById("container_top").style.backgroundColor = "rgb(31, 71, 116)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(31, 71, 116)";
+      document.getElementById("title_section").style.backgroundColor = "rgb(31, 156, 194)";
+      document.getElementById("footer_main").style.backgroundColor = "rgb(130, 213, 219)";
       document.getElementById("main").style.backgroundImage = "url('assets/img/background2.jpg')";
     } else if(this.currentSection == 2){
-      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
-      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
-      document.getElementById("main").style.backgroundImage = "url('assets/img/background3.png')";
+      document.getElementById("container_top").style.backgroundColor = "rgb(31, 71, 116)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(31, 71, 116)";
+      document.getElementById("title_section").style.backgroundColor = "rgb(31, 156, 194)";
+      document.getElementById("footer_main").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background2.jpg')";
     } else if(this.currentSection == 3){
-      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
-      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
-      document.getElementById("main").style.backgroundImage = "url('assets/img/fantasy.jpg')";
+      document.getElementById("container_top").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("title_section").style.backgroundColor = "rgb(0, 122, 131)";
+      document.getElementById("footer_main").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background1.png')";
     } else{
-      document.getElementById("container_top").style.backgroundColor = "rgb(0, 122, 131)";
-      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219);";
-      document.getElementById("main").style.backgroundImage = "url('assets/img/background.png')";
+      document.getElementById("container_top").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("title_container").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("title_section").style.backgroundColor = "rgb(0, 122, 131)";
+      document.getElementById("footer_main").style.backgroundColor = "rgb(130, 213, 219)";
+      document.getElementById("main").style.backgroundImage = "url('assets/img/background1.png')";
     }
   }
 

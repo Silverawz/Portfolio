@@ -9,12 +9,15 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   
+  #mySidenav{
+    background: rgb(27, 26, 26);
+  }
+
   /* The navigation menu links */
   .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -129,7 +132,7 @@
     margin-left: 20%;
     margin-right: 10%;
     transition: margin-left .5s;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(130, 213, 219);
   }
 
   #burger {
@@ -141,11 +144,13 @@
 
   #title_section{
     text-align: center;
-    position: relative;
+    position: relative; 
     font-size: 25px;
     color : rgb(0, 0, 0);
-    font-family: "PT Serif","Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L",Garamond,"Apple Garamond","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",Georgia,serif;
-    border-radius : 2px;
+    border-radius: 100px;
+    border-color: rgb(0, 74, 80);
+    font-family: "PT Serif","Palatino Linotype","URW Palladio L","Book Antiqua";
+    background: rgb(0, 122, 131);
     animation: movingTopToBottom 0.8s linear;
   }
 
@@ -291,7 +296,6 @@
     width: 35px;
   }
 
-
   .bubbles{
     width: 80%;
     display: flex;
@@ -315,7 +319,7 @@
   }
   
   .progress-value-95-blue {
-    animation: load95 3s normal forwards;
+    animation: load95 5s normal forwards;
     box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     background: rgb(52, 231, 255);
@@ -323,26 +327,8 @@
     width: 0;
   }
   
-  .progress-value-75-blue {
-    animation: load75 3s normal forwards;
-    box-shadow: 0 10px 40px -10px #fff;
-    border-radius: 100px;
-    background: rgb(52, 231, 255);
-    height: 8px;
-    width: 0;
-  }
-
   .progress-value-95-green {
-    animation: load95 3s normal forwards;
-    box-shadow: 0 10px 40px -10px #fff;
-    border-radius: 100px;
-    background: rgb(39, 201, 106);
-    height: 8px;
-    width: 0;
-  }
-  
-  .progress-value-75-green {
-    animation: load75 3s normal forwards;
+    animation: load95 10s normal forwards;
     box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     background: rgb(39, 201, 106);
@@ -350,17 +336,8 @@
     width: 0;
   }
 
-  .progress-value-95-orange {
-    animation: load95 3s normal forwards;
-    box-shadow: 0 10px 40px -10px #fff;
-    border-radius: 100px;
-    background:#7510F7;
-    height: 8px;
-    width: 0;
-  }
-
-  .progress-value-75-orange {
-    animation: load75 3s normal forwards;
+  .progress-value-95-purple {
+    animation: load95 15s normal forwards;
     box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     background:#7510F7;
@@ -371,13 +348,9 @@
 
   @keyframes load95 {
     0% { width: 0; }
-    100% { width: 95%; }
+    100% { width: 100%; }
   }
-  
-  @keyframes load75 {
-    0% { width: 0; }
-    100% { width: 75%; }
-  }
+
 
   #skills_section{
     margin-top:40px;
@@ -464,7 +437,6 @@
   }
 
   #projects_section{
-    border: 3px solid rgb(255, 0, 0);
     margin-top: 150px;
     margin-left: 20%;
     margin-right: 10%;
@@ -482,8 +454,8 @@
   .project1{
     grid-area: project1;
     border-style:solid;
-    border-width: 3px;
-    border-color:rgb(0, 17, 255);
+    border-width: 0.3px;
+    border-color:rgb(0, 0, 0);
     background: rgb(255, 255, 255);
   }
 
@@ -491,8 +463,8 @@
     margin-top: 150px;
     grid-area: project2;
     border-style:solid;
-    border-width: 3px;
-    border-color: rgb(21, 255, 0);
+    border-width: 0.3px;
+    border-color:rgb(0, 0, 0);
     background: rgb(255, 255, 255);
   }
 
@@ -501,17 +473,7 @@
     border-width: 0.3px;
     border-color: rgb(0, 255, 255);
   }
-/*
-  #image1_projects1{
-    width: 350px;
-    height: 150px;
-  }
 
-  #image3_projects1, #image4_projects1, #image5_projects1{
-    width: 250px;
-    height: 150px;
-  }
-*/
   #image1_projects1{
     width: 50%;
     height: 200px;
@@ -521,46 +483,6 @@
     width: 100%;
     height: 400px;
   }
-/*
-  #slider{
-    width: 100%;
-    max-width: 1000px;
-    background: rgb(255, 253, 156);
-    border-style:solid;
-    border-width: 2px;
-    border-color: rgb(255, 208, 0);
-    overflow:hidden;
-  }
-
-  #slider figure{
-    position:relative;
-    width: 500%;
-    margin:0;
-    padding:0;
-    font-size:0;
-    left:0;
-    text-align:left;
-    animation: 20s slidy infinite;
-  }
-
-  .image_projects{
-    width: 20%;
-    height: 400px;
-    float:left;
-  }
-
-  @keyframes slidy {
-    0% { left: 0%; }
-    20% { left: 0%; }
-    25% { left: -100%; }
-    45% { left: -100%; }
-    50% { left: -200%; }
-    70% { left: -200%; }
-    75% { left: -300%; }
-    95% { left: -300%; }
-    100% { left: -400%; }
-  }
-*/
 
 .card {
   /* Add shadows to create the "card" effect */
@@ -571,4 +493,8 @@
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+}
+
+#footer_main{
+  background:rgb(130, 213, 219);
 }

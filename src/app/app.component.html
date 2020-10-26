@@ -46,14 +46,17 @@
         <img src="assets/img/bubble.png">
         <img src="assets/img/bubble.png">
       </div>
-      <h2>Hi, i'm <g style="color:rgb(133, 0, 167)">Nicolas</g>. Nice to meet you.</h2>
-      <h3>I'm a full-stack junior web developer.</h3>
+      <h2 *ngIf="language_choosed == 1">Bonjour, je m'appelle <g style="color:rgb(0, 0, 0)">Nicolas</g>. Ravi de vous rencontrer.</h2>
+      <h3 *ngIf="language_choosed == 1">Je suis un développeur web junior full-stack.</h3>
+      <h2 *ngIf="language_choosed == 2">Hi, i'm <g style="color:rgb(0, 0, 0)">Nicolas</g>. Nice to meet you.</h2>
+      <h3 *ngIf="language_choosed == 2">I'm a full-stack junior web developer.</h3>
     </div>
     <!-- Home -->
 
 
     <div *ngIf="currentSection == 1">
-      <h2 id="title_skills_top">As a developer, we have to learn as much as possible newest technologies. Here are my current skills right now. </h2>
+      <h2 id="title_skills_top" *ngIf="language_choosed == 1">Voici mes compétences actuelles. Elles seront régulièrement mise à jour grâce à ma veille technologique. </h2>
+      <h2 id="title_skills_top" *ngIf="language_choosed == 2">As a developer, we have to learn as much as possible newest technologies. Here are my current skills right now. </h2>
     </div>
 
 
@@ -69,54 +72,22 @@
 
 
           <div class="progressbar-container">
-
-            <div class="name_skills">HTML     95%</div>
-
-              <div class="progress">
-                <div class="progress-value-95-blue"></div>
-              </div>
-          
+            <div class="name_skills">HTML5</div>       
           </div>  
-
-
           <div class="progressbar-container">
-
-            <div class="name_skills">CSS 95%</div>
-                
-              <div class="progress">
-                <div class="progress-value-95-blue"></div>
-              </div>
-
+            <div class="name_skills">CSS3 & CSS4</div>      
           </div>
-
           <div class="progressbar-container">
-
-            <div class="name_skills">Bootstrap 95%</div>
-                
-              <div class="progress">
-                <div class="progress-value-95-blue"></div>
-              </div>
-
+            <div class="name_skills">Thymeleaf</div>      
           </div>
-
           <div class="progressbar-container">
-
-            <div class="name_skills">Javascript 75%</div>
-                
-              <div class="progress">
-                <div class="progress-value-75-blue"></div>
-              </div>
-
+            <div class="name_skills">Javascript ecmascript 6</div>
           </div>
-
           <div class="progressbar-container">
-
-            <div class="name_skills">Angular 75%</div>
-                
-              <div class="progress">
-                <div class="progress-value-75-blue"></div>
-              </div>
-
+            <div class="name_skills">Framework : Bootstrap 3 & 4</div>
+          </div>
+          <div class="progressbar-container">
+            <div class="name_skills">Framework : Angular CLI 10</div>         
           </div>
 
       </div>
@@ -133,53 +104,22 @@
 
 
         <div class="progressbar-container">
-
-          <div class="name_skills">Java EE 95%</div>
-
-            <div class="progress">
-              <div class="progress-value-95-green"></div>
-            </div>
-
+          <div class="name_skills">Java Entreprise Edition 8 and more</div>
         </div>
-
-        <div class="progressbar-container">
-        
-          <div class="name_skills">Spring Framework 95%</div>
-
-          <div class="progress">
-            <div class="progress-value-95-green"></div>
-          </div>
-
+        <div class="progressbar-container">  
+          <div class="name_skills">Framework : Spring Boot, Data, Security, Batch</div>
         </div>  
-
         <div class="progressbar-container">
-        
-          <div class="name_skills">Maven/Hibernate 95%</div>
-
-          <div class="progress">
-            <div class="progress-value-95-green"></div>
-          </div>
-
+          <div class="name_skills">Maven / Hibernate / Jpa</div>
         </div> 
-
         <div class="progressbar-container">
-        
-          <div class="name_skills">Junit/Mockito  95%</div>
-
-          <div class="progress">
-            <div class="progress-value-95-green"></div>
-          </div>
-
+          <div class="name_skills">Log4J2 / Session / JWT</div>
         </div> 
-
-        <div class="progressbar-container">
-        
-          <div class="name_skills">Integration Test/ Unitary Test 95%</div>
-
-          <div class="progress">
-            <div class="progress-value-75-green"></div>
-          </div>
-
+        <div class="progressbar-container">  
+          <div class="name_skills">Junit / Mockito / IT / UT</div>
+        </div>
+        <div class="progressbar-container">  
+          <div class="name_skills">MySQL / PostgreSQL</div>
         </div>
 
       </div>
@@ -193,65 +133,25 @@
         <img src="assets/img/logo_more.jpg" class="logo_skills">
 
         <div class="progressbar-container">
-        
-          <div class="name_skills">Git/Github/Gitlab 95%</div>
-
-          <div class="progress">
-            <div class="progress-value-95-orange"></div>
-          </div>
-
+          <div class="name_skills">Git / Github / Gitlab</div>
         </div>
-
         <div class="progressbar-container">
-        
-          <div class="name_skills">Jenkins CI/Postman 95%</div>
-
-          <div class="progress">
-            <div class="progress-value-95-orange"></div>
-          </div>
-
+          <div class="name_skills">Jenkins CI / Postman</div>
         </div>
-
-
         <div class="progressbar-container">
-        
-          <div class="name_skills">Eclipse/Visual Studio Code 95%</div>
-
-          <div class="progress">
-            <div class="progress-value-95-orange"></div>
-          </div>
-
+          <div class="name_skills">Eclipse / Visual Studio Code</div>
         </div>
-
-
-
         <div class="progressbar-container">
-        
-          <div class="name_skills">Docker 75%</div>
-
-          <div class="progress">
-            <div class="progress-value-75-orange"></div>
-          </div>
-
+          <div class="name_skills">Amazon Web Service / Firebase</div>
+        </div>
+        <div class="progressbar-container">
+          <div class="name_skills">Docker</div>
+        </div>
+        <div class="progressbar-container">
+          <div class="name_skills">TDD / Agile</div>
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
       </div>
 
     </div>
@@ -263,72 +163,45 @@
       <div class="project1">
 
         <div class="card">
-          <img src="assets/img/1 (P12).jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>John Doe</b></h4>
-            <p>Architect & Engineer</p>
+          <img src="assets/img/projet1.jpg" alt="Avatar" style="width:100%">
+          <div class="container" *ngIf="language_choosed == 1">
+            <h4><b>Projet de site web pour les associations sportives</b></h4>
+            <p>J'ai réaliser un site web de zéro avec un service REST Java, une authentification avec JWT et un front Angular. 
+              Le site permet d'écrire(User), de diffuser(Moderator), de modifier(Moderator) ou de désactiver(Moderator) des articles par catégorie. Une section forum a également été commencée (mais pas finie). 
+              Créer un compte, s'authenfier avec, accéder à son espace perso.    
+            </p>
+            <p>Lien github du projet : <a href="https://github.com/Silverawz/P12" target="_blank">Lien</a></p>
+          </div>
+          <div class="container" *ngIf="language_choosed == 2">
+            <h4><b>Website Project for sportives associations</b></h4>
+            <p>I've made this website from scratch with RestFULL API Java, JsonWebToken as authentication service and used Angular as front framework for the site.
+              The main features of the site are : read(User), update(Moderator), disable(Moderator) articles from differents category (Football, Basketball...). The begin of a forum section has been created aswell but all features are not implemented yet.
+              You can also made an account and loggin with and access to your personnal space with your infos. 
+            </p>
+            <p>Github link of project : <a href="https://github.com/Silverawz/P12" target="_blank">Link</a></p>
           </div>
         </div>
-        <!--
-        <div id="small_title_project"><h2><b>Site web pour des associations sportives</b></h2></div>
-        <div id="resume_project"><p>resume_projectresume_projectresume_project</p></div>
-        <div id="img_project">
-          <img src="assets/img/1 (P12).jpg" class="image_projects" id="image1_projects1">
-          <a (click)="changeSection(0)" id="next_img_project_1"></a>
-        </div> -->
-      <!-- <div> <a href="https://github.com/Silverawz/P12">Lien du repository github pour ce projet</a></div>--> 
-        
-
-
-
-
-
-
-
-
-
-
-
-        <!--
-        <p style="color:black">Ce site a été crée pour répondre aux besoins d'associations sportives, il permet de diffuser des informations sur internet et de discuter via un forum</p>
-        <div id="slider">
-
-          <figure>
-            <img src="assets/img/1 (P12).jpg" class="image_projects">
-            <img src="assets/img/3 (P12).jpg" class="image_projects">
-            <img src="assets/img/4 (P12).jpg" class="image_projects">
-            <img src="assets/img/5 (P12).png" class="image_projects">
-            <img src="assets/img/1 (P12).jpg" class="image_projects">
-          </figure>
-          <h2 id="small_title_project">Site Web Association sportive (Rapide, responsive et user-friendly)</h2>
-          <a href="https://github.com/Silverawz/P12">Lien du repository github pour ce projet</a>
-        </div>
-      -->
+    
       </div>
 
       <div class="project2">
 
-        
         <div class="card">
-          <img src="assets/img/3 (P12).jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>John Doe</b></h4>
-            <p>Architect & Engineer</p>
+          <img src="assets/img/projet2.jpg" alt="Avatar" style="width:100%">
+          <div class="container" *ngIf="language_choosed == 1">
+            <h4><b>Projet de site d'une bibliothèque</b></h4>
+            <p>API REST Java avec front thymeleaf, authentification par session Spring Security  / Batch réalisé avec JavaMail pour empruns non retourné avant la date butoire     
+            </p>
+            <p>Lien github du projet : <a href="https://github.com/Silverawz/p10-livrables" target="_blank">Lien</a></p>
+          </div>
+          <div class="container" *ngIf="language_choosed == 2">
+            <h4><b>Website project library</b></h4>
+            <p>API REST Java with Thymeleaf as front-end, Session as authentication with Spring Security / Batch made manually to send Email with JavaMail if burrows were not returned before the expiration date     
+            </p>
+            <p>Github link of project : <a href="https://github.com/Silverawz/p10-livrables" target="_blank">Link</a></p>
           </div>
         </div>
-        <!--
-        <div id="slider">
-          <figure>
-            <img src="assets/img/1 (P10).jpg" class="image_projects">
-            <img src="assets/img/2 (P10).png" class="image_projects">
-            <img src="assets/img/3 (P10).png" class="image_projects">
-            <img src="assets/img/4 (P10).png" class="image_projects">
-            <img src="assets/img/1 (P10).jpg" class="image_projects">
-          </figure>
-          <h2 id="small_title_project">Site Web Association sportive (Rapide, responsive et user-friendly)</h2>
-          <a href="https://github.com/Silverawz/P12">Lien du repository github pour ce projet</a>
-        </div>
-      -->
+
       </div>
 
 
@@ -338,10 +211,23 @@
 
     <!-- Contact -->
     <div *ngIf="currentSection == 3" id="contact_section">
-      <h2>You are free to contact me with my email : aaa@aol.fr</h2>
 
+      <div *ngIf="currentSection == 3" id="home_section">
 
-
+        <div class="bubbles">
+          <img src="assets/img/bubble.png">
+          <img src="assets/img/bubble.png">
+          <img src="assets/img/bubble.png">
+          <img src="assets/img/bubble.png">
+          <img src="assets/img/bubble.png">
+          <img src="assets/img/bubble.png">
+          <img src="assets/img/bubble.png">
+        </div>
+        <h2 *ngIf="language_choosed == 1">Vous pouvez me contacter à l'adresse email suivante : </h2>
+        <h3 *ngIf="language_choosed == 1"><a href = "mailto: deroussenicolas@gmail.com">deroussenicolas@gmail.com</a></h3>
+        <h2 *ngIf="language_choosed == 2">You are free to contact me with my email : </h2>
+        <h3 *ngIf="language_choosed == 2"><a href = "mailto: deroussenicolas@gmail.com">deroussenicolas@gmail.com</a></h3>
+    </div>
     </div>
     <!-- Contact -->
 
@@ -350,6 +236,18 @@
 
 
 </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue" id="footer_main">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">© 2020 Portfolio Nicolas Deroussen:
+      <p>Tous droits reservés.</p>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
 <!--
 <div>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
   Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des 
