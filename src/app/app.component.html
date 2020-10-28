@@ -1,6 +1,4 @@
-<!-- javascript:void(0) -->
-
-
+<!--navbar-->
 <div id="mySidenav" class="sidenav">
   <a class="closebtn" (click)="closeNav()">&times;</a>
   <img src="assets/img/logo.jpg" id="logo">
@@ -12,9 +10,10 @@
     <img src="{{ flag_path_img }}">
   </a>
 </div>
+<!--navbar-->
 
+<!-- container top with page title -->
 <div class="container_top" id="container_top">
-<!-- Use any element to open the sidenav -->
 <button (click)="openNav()" class="btn-navbar" id="btn-navbar">
   <div id="burger"></div>
   <div id="burger"></div>
@@ -23,15 +22,11 @@
 
 <div class="title_container" id="title_container"><h1 id="title_section">{{ title_section }}</h1></div>
 </div>
-<!--
-<button (click)="openNav()" class="tw-block tw-full-width tw-interactable tw-interactable--default tw-interactable--hover-enabled tw-interactive" data-test-selector="rotate-arrow"><div class="tw-flex tw-pd-x-05"><div class="ScIconLayout-sc-1bgeryd-0 cFCmuf tw-icon"><div class="ScAspectRatio-sc-1sw3lwy-1 dNNaBC tw-aspect"><div class="ScAspectSpacer-sc-1sw3lwy-0 gkBhyN"></div><svg width="30px" height="100px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" class="ScIconSVG-sc-1bgeryd-1 cMQeyU"><g><path d="M13.5 14.5L9 10l4.5-4.5L12 4l-6 6 6 6 1.5-1.5z"></path></g></svg></div></div></div></button>
--->
+<!-- container top with page title -->
 
 
-
-<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<!-- main layout -->
 <div id="main">
-
 
   <div id="main_layout">
 
@@ -46,9 +41,10 @@
         <img src="assets/img/bubble.png">
         <img src="assets/img/bubble.png">
       </div>
-      <h2 *ngIf="language_choosed == 1">Bonjour, je m'appelle <g style="color:rgb(0, 0, 0)">Nicolas</g>. Ravi de vous rencontrer.</h2>
+      <h2 *ngIf="language_choosed == 1">Bonjour, je m'appelle <g style="color:rgb(0, 0, 0)">Nicolas Deroussen</g>. Ravi de vous rencontrer.</h2>
       <h3 *ngIf="language_choosed == 1">Je suis un développeur web junior full-stack.</h3>
-      <h2 *ngIf="language_choosed == 2">Hi, i'm <g style="color:rgb(0, 0, 0)">Nicolas</g>. Nice to meet you.</h2>
+      <img src="assets/img/nicolas_img.png" style="width:200px;height:200px;border-radius: 3px; margin-left:200px">
+      <h2 *ngIf="language_choosed == 2">Hi, i'm <g style="color:rgb(0, 0, 0)">Nicolas Deroussen</g>. Nice to meet you.</h2>
       <h3 *ngIf="language_choosed == 2">I'm a full-stack junior web developer.</h3>
     </div>
     <!-- Home -->
@@ -223,10 +219,12 @@
           <img src="assets/img/bubble.png">
           <img src="assets/img/bubble.png">
         </div>
-        <h2 *ngIf="language_choosed == 1">Vous pouvez me contacter à l'adresse email suivante : </h2>
-        <h3 *ngIf="language_choosed == 1"><a href = "mailto: deroussenicolas@gmail.com">deroussenicolas@gmail.com</a></h3>
-        <h2 *ngIf="language_choosed == 2">You are free to contact me with my email : </h2>
-        <h3 *ngIf="language_choosed == 2"><a href = "mailto: deroussenicolas@gmail.com">deroussenicolas@gmail.com</a></h3>
+        <h2 *ngIf="language_choosed == 1">Vous pouvez me contacter directement par email : <a href = "mailto: deroussenicolas@gmail.com">Ici</a></h2>
+        <h3 *ngIf="language_choosed == 1">Mon linkedin : <a href = "https://www.linkedin.com/in/nicolas-deroussen-604145186/">Ici</a></h3>
+        <h3 *ngIf="language_choosed == 1">Github : <a href = "https://github.com/Silverawz">Ici</a></h3>
+        <h2 *ngIf="language_choosed == 2">You are free to contact me with on email : <a href = "mailto: deroussenicolas@gmail.com">Here</a></h2>
+        <h3 *ngIf="language_choosed == 2">My linkedin : <a href = "https://www.linkedin.com/in/nicolas-deroussen-604145186/">Here</a></h3>
+        <h3 *ngIf="language_choosed == 2">Github : <a href = "https://github.com/Silverawz">Here</a></h3>
     </div>
     </div>
     <!-- Contact -->
@@ -236,30 +234,19 @@
 
 
 </div>
+<!-- main layout -->
 
   <!-- Footer -->
   <footer class="page-footer font-small blue" id="footer_main">
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">© 2020 Portfolio Nicolas Deroussen:
+    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%" *ngIf="language_choosed == 1">© 2020 Portfolio Nicolas Deroussen:
       <p>Tous droits reservés.</p>
+    </div>
+    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%" *ngIf="language_choosed == 2">© 2020 Portfolio Nicolas Deroussen:
+      <p>All right reserved.</p>
     </div>
     <!-- Copyright -->
   
   </footer>
   <!-- Footer -->
-<!--
-<div>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-  Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des 
-  morceaux de texte pour réaliser un livre spécimen de polices de texte. 
-  Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, 
-  sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de 
-  feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans 
-  des applications de mise en page de texte, comme Aldus PageMaker.</div>
-  <div>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-   Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des 
-   morceaux de texte pour réaliser un livre spécimen de polices de texte. 
-   Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, 
-   sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de 
-   feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans 
-   des applications de mise en page de texte, comme Aldus PageMaker.</div>-->
