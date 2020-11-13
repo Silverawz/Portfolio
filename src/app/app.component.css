@@ -40,11 +40,11 @@ html {
 .effect {
 	position: absolute;
   left: 12.5%;
-  -webkit-transition: 0.7s ease-in-out;
-  -moz-transition: 0.7s ease-in-out;
-  -o-transition: 0.7s ease-in-out;
-  -ms-transition: 0.7s ease-in-out;
-  transition: 0.7s ease-in-out; }
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
 
 	.nav a:nth-child(1):hover ~ .effect {
 	  left: 12.5% !important; }
@@ -77,10 +77,9 @@ html {
 header {
   width: 100%;
   height: 100vh;
-  background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg) no-repeat 50% 50%;
+  background: url("../assets/img/background0.png") no-repeat 50% 50%;
   background-size: cover;
 }
-
 
 .logo {
   line-height: 45px;
@@ -88,7 +87,7 @@ header {
   float: left;
   margin: 16px 46px;
   color: #ff7300;
-  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  text-shadow: 1px 1px 2px rgb(255, 251, 0), 0 0 1em rgb(255, 153, 0), 0 0 0.2em rgb(0, 0, 0);
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
@@ -170,4 +169,16 @@ nav ul li a {
         display: block;
   }
 
+}
+
+.inBetweenSection{
+  width:100%;
+  height:5vh;
+  background: rgb(0, 88, 40);
+}
+
+.skills{
+  width:100%;
+  height:100vh;
+  background: rgb(0, 0, 0);
 }
