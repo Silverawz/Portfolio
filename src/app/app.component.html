@@ -10,9 +10,9 @@
     <div class="menu">
       <ul>
         <div class="ph-line-nav nav">
-          <a href="#" (click)="section(0)">Accueil</a>
-          <a href="#" (click)="section(1)">Compétences</a>
-          <a href="#" (click)="section(2)">Projets</a>
+          <a href="http://localhost:4200" (click)="section(0)">Accueil</a>
+          <a href="http://localhost:4200#content" (click)="section(1)">Compétences</a>
+          <a href="http://localhost:4200#projects" (click)="section(2)">Projets</a>
           <a href="#" (click)="section(3)">Contact</a>
           <div class="effect" id="effect"></div>
         </div>
@@ -22,20 +22,24 @@
   <!-- navbar end -->
 </header>
 
-<div class="content">
+<div class="content" id="content">
 
   <div class="inBetweenSection"></div>
+  <div class="dark fire">
+    <h2 class="Blazing" contenteditable="true">Compétences</h2>
+  </div>
   <div class="skills">
 
 
 
-    <div class="dark fire">
-      <h2 class="Blazing" contenteditable="true">Compétences</h2>
-    </div>
+
 
   </div>
 
+  <div class="projects" id="projects">
 
+    <div class="inBetweenSection"></div>
+    <h2 contenteditable data-heading="Frozen">Projets</h2>
 
 
   <p>
