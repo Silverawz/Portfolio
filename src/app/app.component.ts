@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'Portfolio';
+  projectsSelected = 1;
 
   ngOnInit() {
 
+  }
+
+  changeProjectText(projectNumber){
+    if(projectNumber != null)
+    this.projectsSelected = projectNumber;
   }
 
   section(sectionNumber){

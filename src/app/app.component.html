@@ -1,4 +1,4 @@
-<header>
+<header id="accueil">
   <!-- navbar -->
   <nav>
     <div class="menu-icon">
@@ -10,19 +10,20 @@
     <div class="menu">
       <ul>
         <div class="ph-line-nav nav">
-          <a href="http://localhost:4200" (click)="section(0)">Accueil</a>
-          <a href="http://localhost:4200#content" (click)="section(1)">Compétences</a>
-          <a href="http://localhost:4200#projects" (click)="section(2)">Projets</a>
-          <a href="#" (click)="section(3)">Contact</a>
+          <a href="http://localhost:4200#accueil" (click)="section(0)">Accueil</a>
+          <a href="http://localhost:4200#competences" (click)="section(1)">Compétences</a>
+          <a href="http://localhost:4200#projets" (click)="section(2)">Projets</a>
+          <a href="http://localhost:4200#contact" (click)="section(3)">Contact</a>
           <div class="effect" id="effect"></div>
         </div>
       </ul>
     </div>
   </nav>
+  
   <!-- navbar end -->
 </header>
 
-<div class="content" id="content">
+<div class="content" id="competences">
 
   <div class="inBetweenSection"></div>
   <div class="dark fire">
@@ -36,17 +37,69 @@
 
   </div>
 
-  <div class="projects" id="projects">
+  <div class="projects" id="projets">
 
     <div class="inBetweenSection"></div>
     <h2 contenteditable data-heading="Frozen">Projets</h2>
 
+    
+    <!--test-->
 
-  <p>
-     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  </p>
-  <p>
-     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  </p>
+    <div class="container">
+      <div id="left">
+        <h1>CryptoCurrencies</h1>
+        <p *ngIf="projectsSelected == 1">1111Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
+        <p *ngIf="projectsSelected == 2">2222Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
+        <p *ngIf="projectsSelected == 3">3333Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
+        <p *ngIf="projectsSelected == 4">4444Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
+      </div>
+      <div id="right">
+        <ul>
+          <li (mouseover)="changeProjectText(1)"> 
+            <img src="https://cdn.worldvectorlogo.com/logos/appcoins.svg" alt="Ti pidr">
+            <span>
+              <strong>Ethos</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.       </p>
+            </span>
+          </li>
+          <li (mouseover)="changeProjectText(2)"> 
+            <img src="https://cdn.worldvectorlogo.com/logos/ethos.svg" alt="">
+            <span>
+              <strong>Ethos</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   </p>
+            </span>
+          </li>
+          <li (mouseover)="changeProjectText(3)"> 
+            <img src="https://cdn.worldvectorlogo.com/logos/iota-1.svg" alt="">
+            <span>
+              <strong>Iota</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+            </span>
+          </li>
+
+          <li (mouseover)="changeProjectText(4)"> 
+            <img src="https://cdn.worldvectorlogo.com/logos/iota-1.svg" alt="">
+            <span>
+              <strong>Iota</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+            </span>
+          </li>
+
+        </ul>
+      </div>
+
+ 
+
+
+    </div>
+
+    <!--test-->
+
+    <div class="contact" id="contact" style="margin-top:600px;margin-bottom:1500px;">
+
+      <div class="dark fire">
+        <h2 class="Blazing" contenteditable="true">Contact</h2>
+      </div>
+    </div>
 
 </div>
