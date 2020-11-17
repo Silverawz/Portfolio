@@ -19,87 +19,114 @@
       </ul>
     </div>
   </nav>
-  
   <!-- navbar end -->
 </header>
 
+<!-- competences -->
 <div class="content" id="competences">
-
   <div class="inBetweenSection"></div>
   <div class="dark fire">
     <h2 class="Blazing" contenteditable="true">Compétences</h2>
   </div>
+  <!-- competences -->
   <div class="skills">
-
-
-
-
-
   </div>
+  <!-- competences end-->
 
+  <!-- projets -->
   <div class="projects" id="projets">
-
     <div class="inBetweenSection"></div>
-    <h2 contenteditable data-heading="Frozen">Projets</h2>
-
-    
-    <!--test-->
-
+    <h2 contenteditable data-heading="Frozen">Projets</h2>   
+    <!--projets container -->
     <div class="container">
-      <div id="left">
-        <h1>CryptoCurrencies</h1>
-        <p *ngIf="projectsSelected == 1">1111Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
-        <p *ngIf="projectsSelected == 2">2222Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
-        <p *ngIf="projectsSelected == 3">3333Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
-        <p *ngIf="projectsSelected == 4">4444Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae doloribus nulla dolorum, vitae ducimus tempore quisquam, maxime repellendus ipsam tenetur deleniti, odit quo consequatur deserunt commodi labore culpa repellat.</p>
+      <div id="left">    
+        <h3>Le code source de mes projets est accessible directement sur mon <a href="https://github.com/Silverawz?tab=repositories" class="favorite styled" type="button" target="_blank"> GitHub</a></h3>
+        <h4 *ngIf="projectsSelected == 1">Site pour des associations sportives</h4>
+        <p *ngIf="projectsSelected == 1">Un site web comportant des sections "Articles" pour la diffusion d'informations par catégorie sportive.</p>
+        <p *ngIf="projectsSelected == 1">Une section "Création de compte", "Authentification" et "Accéder à son espace perso", "Créer un article",</p>
+        <p *ngIf="projectsSelected == 1">"Modifier un article", "Desactiver un article" ainsi qu'un forum.</p>
+        <h4 *ngIf="projectsSelected == 2">Site pour une bibliotheque 2ième partie</h4>
+        <p *ngIf="projectsSelected == 2">Un site web sur la reservation et l'emprunt de livre pour une bibliotheque à améliorer.</p>
+        <p *ngIf="projectsSelected == 2">Un batch mail qui envoi de façon quotidienne aux personnes n'ayant pas rendues les livres à temps.</p>
+        <p *ngIf="projectsSelected == 2">La possibilité pour un utilisateur d'annuler sa réservation en cours ou d'en faire une si aucun livre n'est disponible.</p>
+        <h4 *ngIf="projectsSelected == 3">Test et debug d'une application Java 8</h4>
+        <p *ngIf="projectsSelected == 3">Une application Java 8 avec spring et une configuration XML.</p>
+        <p *ngIf="projectsSelected == 3">L'application a été testé avec des TU et les bugs/erreurs ont été corrigés.</p>
+        <p *ngIf="projectsSelected == 3">Le code coverage de 75% et les TODO a implémentés. Tout ceci en utilisant l'Intégration continue avec Jenkins.</p>
+        <h4 *ngIf="projectsSelected == 4">Site pour une bibliotheque</h4>
+        <p *ngIf="projectsSelected == 4">Un site web sur la reservation et l'emprunt de livre pour une bibliotheque.</p>
+        <p *ngIf="projectsSelected == 4">Un batch mail et une API de réservation pour emprunter des livres et étendre l'emprunt (deux fois maximum)</p>
+        <p *ngIf="projectsSelected == 4">La sécurité de l'application est réalisé avec Spring Sécurity et l'utilisation des sessions.</p>
+        <p *ngIf="projectsSelected == 1"><a href="https://github.com/Silverawz/p12_BackEnd" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
+        <p *ngIf="projectsSelected == 2"><a href="https://github.com/Silverawz/p10" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
+        <p *ngIf="projectsSelected == 3"><a href="https://github.com/Silverawz/projet-9" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
+        <p *ngIf="projectsSelected == 4"><a href="https://github.com/Silverawz/p7-source-code" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
+        <img id="img_project_full_size" src="{{imgProjectUrl}}">
       </div>
       <div id="right">
         <ul>
-          <li (mouseover)="changeProjectText(1)"> 
-            <img src="https://cdn.worldvectorlogo.com/logos/appcoins.svg" alt="Ti pidr">
+          <li (mouseover)="changeProjectText(1)" id="project_1"> 
+            <img src="../assets/img/logo_1.png" alt="">
             <span>
-              <strong>Ethos</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.       </p>
+              <p>API JAVA REST & Angular (Securisé par JsonWebToken)</p>
             </span>
           </li>
-          <li (mouseover)="changeProjectText(2)"> 
-            <img src="https://cdn.worldvectorlogo.com/logos/ethos.svg" alt="">
+          <li (mouseover)="changeProjectText(2)" id="project_2"> 
+            <img src="../assets/img/logo_2.svg" alt="">
             <span>
-              <strong>Ethos</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   </p>
+              <p>API JAVA REST & BATCH EMAIL (Securisé par session)</p>
             </span>
           </li>
-          <li (mouseover)="changeProjectText(3)"> 
-            <img src="https://cdn.worldvectorlogo.com/logos/iota-1.svg" alt="">
+          <li (mouseover)="changeProjectText(3)" id="project_3"> 
+            <img src="../assets/img/logo_3.png" alt="">
             <span>
-              <strong>Iota</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+              <p>Maintenance d'une application (Test unitaire & Intégration)</p>
             </span>
           </li>
-
-          <li (mouseover)="changeProjectText(4)"> 
-            <img src="https://cdn.worldvectorlogo.com/logos/iota-1.svg" alt="">
+          <li (mouseover)="changeProjectText(4)" id="project_4"> 
+            <img src="../assets/img/logo_4.png" alt="">
             <span>
-              <strong>Iota</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+              <p>API JAVA REST & BATCH EMAIL (Securisé par session)</p>
             </span>
           </li>
-
         </ul>
       </div>
+    </div>
+    <!--projets container end-->
+  </div>
+  <!-- projets end-->
 
- 
-
-
+  <!-- contact -->
+  <div class="contact" id="contact">
+    <div class="deconstructed">Contact
+      <div>Contact</div>
+      <div>Contact</div>
+      <div>Contact</div>
+      <div>Contact</div>
     </div>
 
-    <!--test-->
-
-    <div class="contact" id="contact" style="margin-top:600px;margin-bottom:1500px;">
-
-      <div class="dark fire">
-        <h2 class="Blazing" contenteditable="true">Contact</h2>
-      </div>
+    <div class="main_contact">
+      <p>Merci pour votre visite!</p>
+      <p>Le site n'est pas totalement responsive pour mobile, je travaille dessus en ce moment même.</p>
+      <p>Vous pouvez me contacter sur mon adresse email personnelle : deroussenicolas@gmail.com</p>
+      <p>github
+        facebook
+        twitter</p>
     </div>
+  </div>
+  <!-- contact end-->
 
-</div>
+
+ <!-- Footer -->
+ <footer class="page-footer font-small blue" id="footer_main">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">© 2020 Portfolio Nicolas Deroussen
+  </div>
+  <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">
+    Tous droits réservés
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
