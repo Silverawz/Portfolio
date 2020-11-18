@@ -244,7 +244,12 @@ h3 {
   color:white;
 }
 
-p {color: white; text-align: center;}
+p {
+  color: white; 
+  text-align: center;
+}
+
+
 h2 {
 	background: url("../assets/img/ice_background.jpg");
   -webkit-background-clip: text;
@@ -343,7 +348,7 @@ h1{
 }
 
 #left > p{
-  color:grey;
+  color:rgb(192, 192, 192);
   line-height: 1.5em;
 }
 
@@ -394,9 +399,8 @@ h4{
   border-radius:6px;
 }
 
-#img_project_full_size:hover{
-  width: 850px;
-  height:475px;
+.projects{
+  background:black;
 }
 
 .btn_shortcut_project{
@@ -422,120 +426,78 @@ h4{
   background-color: rgb(80, 3, 3);
 }
 
-/* test */
+.btn_email{
+  border: 0;
+  padding: 0 20px;
+  line-height: 2.5;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(126, 19, 117);
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.btn_email:hover {
+  background-color: rgb(56, 0, 51);
+}
 
 #contact{
-  margin-top:100px;
-  padding-bottom:300px;
+  padding-bottom: 50px;
+  background:black;
 }
 
-.deconstructed {
-  position: relative;
-  text-align: center;
-  margin: auto;
-  height: 1.71em;
-  color: transparent;
-  font-family: 'Cambay', sans-serif;
-  font-size: 8vw;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.03em;
+#contact_title{
+  font-size:4.6rem;
+  color:rgb(238, 255, 0);
+  text-align:center;
+  animation: 30s Fading infinite alternate linear;
 }
 
-.deconstructed > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: #ffff64;
-  pointer-events: none;
+#contact_title > div{
+    display:inline-block;
+    box-sizing: border-box;
 }
 
-.deconstructed > div:nth-child(1) {
-  -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
-  mask-image: linear-gradient(black 25%, transparent 25%);
-  animation: deconstructed1 5s infinite;
-}
-
-.deconstructed > div:nth-child(2) {
-  -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
-  mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
-  animation: deconstructed2 5s infinite;
-}
-
-.deconstructed > div:nth-child(3) {
-   -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
-  mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
-  animation: deconstructed3 5s infinite;
-}
-
-.deconstructed > div:nth-child(4) {
-   -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
-  mask-image: linear-gradient(transparent 75%, black 75%);
-  animation: deconstructed4 5s infinite;
-}
-
-@keyframes deconstructed1 {
-  0% {
-    transform: translateX(100%);
+@keyframes Fading {
+	0%   {   
+    color:rgb(255, 115, 0);    
   }
-  26% {
-    transform: translateX(0%);
+	25%   {
+    color:rgb(121, 1, 1);
   }
-  83% {
-    transform: translateX(-0.1%);
+  50%   { 
+    color:rgb(84, 148, 0);
   }
-  100% {
-    transform: translateX(-120%);
+	75%   {
+    color:rgb(0, 202, 158);
+  }
+	100%   { 
+    color:rgb(49, 0, 43);
   }
 }
 
-@keyframes deconstructed2 {
-  0% {
-    transform: translateX(100%);
-  }
-  24% {
-    transform: translateX(0.5%);
-  }
-  82% {
-    transform: translateX(-0.2%);
-  }
-  100% {
-    transform: translateX(-125%);
-  }
-}
-
-@keyframes deconstructed3 {
-  0% {
-    transform: translateX(100%);
-  }
-  22% {
-    transform: translateX(0%);
-  }
-  81% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-130%);
-  }
-}
-
-@keyframes deconstructed4 {
-  0% {
-    transform: translateX(100%);
-  }
-  20% {
-    transform: translateX(0%);
-  }
-  80% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-135%);
-  }
+.main_contact{
+  padding-top:140px;
 }
 
 #footer_main{
-  background:rgb(85, 85, 85);
+  margin-top:0;
+  padding-top:0;
+  background:rgb(0, 0, 0);
 }
+
+#footer{
+  color:white;
+}
+
+#btn-list-social-network{
+  text-align: center;
+}  

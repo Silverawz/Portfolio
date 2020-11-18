@@ -1,17 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
 
   title = 'Portfolio';
   projectsSelected = 1;
   imgProjectUrl = "../assets/img/1.jpg";
+
   ngOnInit() {
     
+  }
+
+  secret(){
+    console.log("TO DO");
   }
 
   changeProjectText(projectNumber){
