@@ -1,166 +1,97 @@
-<header id="accueil">
-  <!-- navbar -->
-  <nav>
-    <div class="menu-icon">
-      <i class="fa fa-bars fa-2x"></i>
-    </div>
-    <div class="logo">
-      PORTFOLIO
-    </div>
-    <div class="menu">
-      <ul>
-        <div class="ph-line-nav nav">
-          <a href="https://deroussenicolas.fr/#accueil" (click)="section(0)">Accueil</a>
-          <a href="https://deroussenicolas.fr/#competences" (click)="section(1)">Compétences</a>
-          <a href="https://deroussenicolas.fr/#projets" (click)="section(2)">Projets</a>
-          <a href="https://deroussenicolas.fr/#contact" (click)="section(3)">Contact</a>
-          <div class="effect" id="effect"></div>
-        </div>
-      </ul>
-    </div>
+<header>
+  <nav id='nav'>
+      <div class="hamburger">
+         <a (click)="hamburger()">{{menu}}</a>
+      </div>
+      <div class="logo">Logo</div>
+      <div class="menu">
+          <ul id="nav-ul" class="false">
+             <!-- <li><a href="https://deroussenicolas.fr/#accueil">Accueil</a></li>-->
+              <li><a href="http://localhost:4200/#home" [style.color]="color">Accueil</a></li>
+              <li><a href="http://localhost:4200/#skills" [style.color]="color">Compétences</a></li>
+              <li><a href="http://localhost:4200/#projects" [style.color]="color">Projets</a></li>
+              <li><a href="http://localhost:4200/#contact" [style.color]="color">Contact</a></li>
+          </ul>
+      </div>
   </nav>
-  <div style="height:391px;width:100%;"></div>
-  <a (click)="secret()" type="button" style="margin-left:355px;background-color: #000000; border: none;color: rgb(0, 0, 0);
-  text-align: center;text-decoration: none;display: inline-block;font-size: 32px;border-radius: 50%;cursor: pointer;">?</a>
-  <!-- navbar end -->
 </header>
+<!-- Home -->
+<section id="home">
+<h1>PROGRAMMER : A Tool for converting caffeine into code</h1>
+<h2 class="message"></h2>
+<h2 class="message2"></h2>
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+    </p>
+  </section>
+<!-- Home -->
 
+<div id="prend_bcp_de_place"></div>
 
+<!-- Skills -->
+  <section id="skills">
+    <h1>Compétences</h1>
+    
+    <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+        </p>
+      </section>
+<!-- Skills -->
 
-<!-- competences -->
-<div class="content" id="competences">
-  <div class="inBetweenSection"></div>
-  <div class="dark fire">
-    <h2 class="Blazing">Compétences</h2>
-  </div>
-  <!-- competences -->
-  <div class="skills">
-  </div>
-</div>
-  <!-- competences end-->
+<div id="prend_bcp_de_place"></div>
 
-  <!-- projets -->
-  <div class="projects" id="projets">
-    <div class="inBetweenSection"></div>
-    <h2 data-heading="Frozen">Projets</h2>   
-    <!--projets container -->
-    <div class="container">
-      <div id="left">    
-        <h3>Le code source de mes projets est accessible directement sur mon <a href="https://github.com/Silverawz?tab=repositories" class="favorite styled" type="button" target="_blank"> GitHub</a></h3>
-        <h4 *ngIf="projectsSelected == 1">Site pour des associations sportives</h4>
-          <p *ngIf="projectsSelected == 1">Un site web comportant des sections "Articles" pour la diffusion d'informations par catégorie sportive.</p>
-          <p *ngIf="projectsSelected == 1">Une section "Création de compte", "Authentification" et "Accéder à son espace perso", "Créer un article",</p>
-          <p *ngIf="projectsSelected == 1">"Modifier un article", "Desactiver un article" ainsi qu'un forum.</p>
-        <h4 *ngIf="projectsSelected == 2">Site pour une bibliotheque 2ième partie</h4>
-          <p *ngIf="projectsSelected == 2">Un site web sur la reservation et l'emprunt de livre pour une bibliotheque à améliorer.</p>
-          <p *ngIf="projectsSelected == 2">Un batch mail qui envoi de façon quotidienne aux personnes n'ayant pas rendues les livres à temps.</p>
-          <p *ngIf="projectsSelected == 2">La possibilité pour un utilisateur d'annuler sa réservation en cours ou d'en faire une si aucun livre n'est disponible.</p>
-        <h4 *ngIf="projectsSelected == 3">Test et debug d'une application Java 8</h4>
-          <p *ngIf="projectsSelected == 3">Une application Java 8 avec spring et une configuration XML.</p>
-          <p *ngIf="projectsSelected == 3">L'application a été testé avec des TU et les bugs/erreurs ont été corrigés.</p>
-          <p *ngIf="projectsSelected == 3">Le code coverage de 75% et les TODO a implémentés. Tout ceci en utilisant l'Intégration continue avec Jenkins.</p>
-        <h4 *ngIf="projectsSelected == 4">Site pour une bibliotheque</h4>
-          <p *ngIf="projectsSelected == 4">Un site web sur la reservation et l'emprunt de livre pour une bibliotheque.</p>
-          <p *ngIf="projectsSelected == 4">Un batch mail et une API de réservation pour emprunter des livres et étendre l'emprunt (deux fois maximum)</p>
-          <p *ngIf="projectsSelected == 4">La sécurité de l'application est réalisé avec Spring Sécurity et l'utilisation des sessions.</p>
-          <p *ngIf="projectsSelected == 1"><a href="https://github.com/Silverawz/p12_BackEnd" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
-          <p *ngIf="projectsSelected == 2"><a href="https://github.com/Silverawz/p10" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
-          <p *ngIf="projectsSelected == 3"><a href="https://github.com/Silverawz/projet-9" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
-          <p *ngIf="projectsSelected == 4"><a href="https://github.com/Silverawz/p7-source-code" class="btn_shortcut_project" type="button" target="_blank">Code source</a></p>
-        <img id="img_project_full_size" src="{{imgProjectUrl}}">
-      </div>
-      <div id="right">
-        <ul>
-          <li (mouseover)="changeProjectText(1)" id="project_1"> 
-            <img src="../assets/img/logo_1.png" alt="">
-            <span>
-              <p>API JAVA REST & Angular (Securisé par JsonWebToken)</p>
-            </span>
-          </li>
-          <li (mouseover)="changeProjectText(2)" id="project_2"> 
-            <img src="../assets/img/logo_2.svg" alt="">
-            <span>
-              <p>API JAVA REST & BATCH EMAIL (Securisé par session)</p>
-            </span>
-          </li>
-          <li (mouseover)="changeProjectText(3)" id="project_3"> 
-            <img src="../assets/img/logo_3.png" alt="">
-            <span>
-              <p>Maintenance d'une application (Test unitaire & Intégration)</p>
-            </span>
-          </li>
-          <li (mouseover)="changeProjectText(4)" id="project_4"> 
-            <img src="../assets/img/logo_4.png" alt="">
-            <span>
-              <p>API JAVA REST & BATCH EMAIL (Securisé par session)</p>
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!--projets container end-->
-  </div>
-  <!-- projets end-->
+<!-- Projects -->
+<section id="projects">
+  <h1>Projets</h1>
+  
+  <p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+      </p>
+    </section>
+<!-- Projects -->
 
-  <!-- contact -->
-  <div class="contact" id="contact">
-    <div class="inBetweenSection"></div>
-    <div class="inBetweenSection"></div>
-    <div class="inBetweenSection"></div>
-    <div class="inBetweenSection"></div>
-      <div id="contact_title">
-        <div id="lettre_1">C</div><div id="lettre_2">o</div>
-        <div id="lettre_3">n</div><div id="lettre_4">t</div>
-        <div id="lettre_5">a</div><div id="lettre_6">c</div>
-        <div id="lettre_7">t</div>
-      </div>
+<div id="prend_bcp_de_place"></div>
 
-      <div class="main_contact">
-        <p>Merci pour votre visite !</p>
-        <p style="color:yellow">Je suis à la recherche d'un emploi.</p>
-        <p>Vous pouvez me contacter sur mon adresse email personnelle en cliquant</p>   
-        <p><a href="mailto:deroussenicolas@gmail.com" class="btn_email" type="button">Ici</a></p>
-        <div class="inBetweenSection"></div>
-        <div class="inBetweenSection"></div>
-        <div class="inBetweenSection"></div>
-        <div id="btn-list-social-network">
-          
-          <form>
-            <button class="js-sharing-popup-twitter" data-share-text="" data-share-url="" data-share-via="" data-share-hashtags="" data-share-related="" formaction="https://twitter.com/silverawz">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="twtr-icon  twtr-color-fill--blue-dark  has-hover"> 
-                <path opacity="0" d="M0 0h24v24H0z"></path> 
-                <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path> 
-              </svg>
-            </button>
+<!-- Contact -->
+<section id="contact">
+  <h1>Contact</h1>
+  
+  <p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus nulla cupiditate et deserunt veniam vero est aliquid animi, fugiat itaque blanditiis dolore eius voluptatem culpa excepturi nobis! Tempore, enim.
+      </p>
+    </section>
+<!-- Contact -->
 
-            <button class="js-sharing-popup-twitter" data-share-text="" data-share-url="" data-share-via="" data-share-hashtags="" data-share-related="" formaction="https://fr-fr.facebook.com/nicolas.deroussen/about">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="twtr-icon  twtr-color-fill--blue-dark  has-hover"> 
-                <path d="M16.75,9H13.5V7a1,1,0,0,1,1-1h2V3H14a4,4,0,0,0-4,4V9H8v3h2v9h3.5V12H16Z"></path> 
-              </svg>
-            </button>
-
-          <button class="js-sharing-popup-twitter" data-share-text="" data-share-url="" data-share-via="" data-share-hashtags="" data-share-related="" formaction="https://www.linkedin.com/in/nicolas-deroussen-604145186/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="twtr-icon  twtr-color-fill--blue-dark  has-hover">
-              <rect height="11" width="4" x="3" y="9"></rect>
-              <circle cx="5" cy="5" r="2"></circle>
-              <path d="M16.5,8.25A4.47251,4.47251,0,0,0,13,9.95343V9H9V20h4V13a2,2,0,0,1,4,0v7h4V12.75A4.5,4.5,0,0,0,16.5,8.25Z"></path>
-            </svg>
-          </button>
-        </form>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- contact end-->
-
-
- <!-- Footer -->
+<div id="prend_bcp_de_place"></div>
+<!-- Footer -->
  <footer class="page-footer font-small blue" id="footer_main">
   <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">© 2020 Portfolio Nicolas Deroussen</div>
-    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">Tous droits réservés. Version 1.0</div>
+    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">© 2021 Portfolio Nicolas Deroussen</div>
+    <div class="footer-copyright text-center py-3" id="footer" style="margin-left:40%">Tous droits réservés.</div>
   <!-- Copyright -->
   </footer>
 <!-- Footer -->
