@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener} from '@angular/core';
 
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-root',
@@ -14,17 +15,15 @@ export class AppComponent implements OnInit {
   title = 'Portfolio';
   menu:String = "Ouvrir";
   msg_introduction:String = "Bonjour, je m'appelle Nicolas Deroussen";
-  msg_introduction_next:String = "Je suis un développeur Java/Web junior full-stack";
   color:String = "black";
   timer:number = 100;
   index:number = 0;
-  index2:number = 0;
-  startSecondMessage:boolean = false;
 
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true); //third parameter
     this.typeWriter();
-    this.typeWriter2nd();
+    particlesJS.load('particles-js', 'assets/data/particles.json');
+    //, particlesJS.load('particles-js', 'assets/data/particles.json'function() { console.log('callback - particles.js config loaded'); });
   }
 
   typeWriter() {
@@ -36,23 +35,8 @@ export class AppComponent implements OnInit {
       } else{
         setTimeout(this.typeWriter.bind(this), this.timer);
       }
-      if(this.index == 19){
-        this.startSecondMessage = true;
-      }
     }
   }
-  
-  typeWriter2nd(){
-    if (this.startSecondMessage && this.index2 < this.msg_introduction_next.length) {
-      if(this.index2 < this.msg_introduction_next.length){
-        document.querySelector(".message2").innerHTML += this.msg_introduction_next[this.index2];
-        this.index2++;
-      }
-      setTimeout(this.typeWriter2nd.bind(this), this.timer*0.8);
-    } else if (!this.startSecondMessage){
-      setTimeout(this.typeWriter2nd.bind(this), this.timer*25);
-    }
-  } 
 
   // ngOnDestroy() {
   //   window.removeEventListener('scroll', this.scroll, true);
