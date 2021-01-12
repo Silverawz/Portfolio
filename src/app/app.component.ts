@@ -1,3 +1,4 @@
+import { getCurrencySymbol } from '@angular/common';
 import { Component, OnInit, HostListener} from '@angular/core';
 
 declare var particlesJS: any;
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit {
   title = 'Portfolio';
   menu:String = "Ouvrir";
   msg_introduction:String = "Bonjour, je m'appelle Nicolas Deroussen";
-  color:String = "rgb(37, 189, 181)";
+  color:String = "white";
+  currentSection:number = 1;
   timer:number = 100;
   index:number = 0;
 
@@ -25,18 +27,23 @@ export class AppComponent implements OnInit {
     particlesJS.load('particles-js', 'assets/data/particles.json');
     //, particlesJS.load('particles-js', 'assets/data/particles.json'function() { console.log('callback - particles.js config loaded'); });
     window.addEventListener('scroll', this.scroll2, true); //third parameter
+
   }
 
   scroll2 = (event): void => {
     this.backAllToInitialColor();
-    if(window.scrollY >= 246 && window.scrollY < 1146){
+    if(window.scrollY >= 0 && window.scrollY < 1146){
       document.getElementById('menu_1').style.color = "green";
+      if(this.currentSection != 1) this.currentSection = 1;
     } else if(window.scrollY >= 1146 && window.scrollY < 2388){
       document.getElementById('menu_2').style.color = "green";
+      if(this.currentSection != 2) this.currentSection = 2;
     } else if(window.scrollY >= 2388 && window.scrollY < 4266){
       document.getElementById('menu_3').style.color = "green";
+      if(this.currentSection != 3) this.currentSection = 3;
     }else if(window.scrollY >= 4266){
       document.getElementById('menu_4').style.color = "green";
+      if(this.currentSection != 4) this.currentSection = 4;
     }
   }
 
@@ -60,18 +67,16 @@ export class AppComponent implements OnInit {
   }
 
   out(category){
-    document.getElementById('menu_'+category).style.color = this.backToInitialColor();
+    document.getElementById('menu_'+category).style.color = this.backToInitialColor(category);
   }
 
-  backToInitialColor(){
-    let actualColor;
-    if(this.color == "rgb(37, 189, 181)"){
-      actualColor = "rgb(37, 189, 181)";
-    } else {
-      actualColor = "white";
-    }
-    return actualColor;
-  }
+  backToInitialColor(category){
+    this.color = "white";
+    if(this.currentSection == category){
+      return "green";
+    } 
+    return "white";
+  } 
 
   backAllToInitialColor(){
     let actualColor;
@@ -89,20 +94,16 @@ export class AppComponent implements OnInit {
   //   window.removeEventListener('scroll', this.scroll, true);
   // }
 
+ 
   scroll = (event): void => {
     if(window.scrollY > 0 && document.getElementById('nav').className != 'scroll'){
       document.getElementById('nav').className = 'scroll';
-      this.color = "white";
     } 
     else if(window.scrollY == 0 && document.getElementById('nav').className == 'scroll'){
       document.getElementById('nav').className = '';
-      this.color = "rgb(37, 189, 181)";
     }
-    
-    //handle your scroll here
-    //notice the 'odd' function assignment to a class field
-    //this is used to be able to remove the event listener
-  };
+
+  };  
 
   hamburger(){
     if(document.getElementById('nav-ul').className != 'true'){
