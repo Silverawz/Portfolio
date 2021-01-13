@@ -1,5 +1,4 @@
-import { getCurrencySymbol } from '@angular/common';
-import { Component, OnInit, HostListener} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 declare var particlesJS: any;
 
@@ -21,13 +20,13 @@ export class AppComponent implements OnInit {
   timer:number = 100;
   index:number = 0;
 
+ 
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true); //third parameter
     this.typeWriter();
     particlesJS.load('particles-js', 'assets/data/particles.json');
     //, particlesJS.load('particles-js', 'assets/data/particles.json'function() { console.log('callback - particles.js config loaded'); });
     window.addEventListener('scroll', this.scroll2, true); //third parameter
-
   }
 
   scroll2 = (event): void => {
@@ -35,13 +34,13 @@ export class AppComponent implements OnInit {
     if(window.scrollY >= 0 && window.scrollY < 1146){
       document.getElementById('menu_1').style.color = "green";
       if(this.currentSection != 1) this.currentSection = 1;
-    } else if(window.scrollY >= 1146 && window.scrollY < 2388){
+    }  else if(window.scrollY >= 1146 && window.scrollY < 2330){
       document.getElementById('menu_2').style.color = "green";
       if(this.currentSection != 2) this.currentSection = 2;
-    } else if(window.scrollY >= 2388 && window.scrollY < 4266){
+    } else if(window.scrollY >= 2330 && window.scrollY < 3381){
       document.getElementById('menu_3').style.color = "green";
       if(this.currentSection != 3) this.currentSection = 3;
-    }else if(window.scrollY >= 4266){
+    } else if(window.scrollY >= 3381){
       document.getElementById('menu_4').style.color = "green";
       if(this.currentSection != 4) this.currentSection = 4;
     }
@@ -138,4 +137,11 @@ export class AppComponent implements OnInit {
                           }
           }) */
 
+  moveToSection(sectionNumber){
+    if(sectionNumber == 1) document.getElementById('home').scrollIntoView({behavior:"smooth"});
+    else if(sectionNumber == 2) document.getElementById('skills').scrollIntoView({behavior:"smooth"});
+    else if(sectionNumber == 3) document.getElementById('projects').scrollIntoView({behavior:"smooth"});
+    else if(sectionNumber == 4) document.getElementById('contact').scrollIntoView({behavior:"smooth"});
+    else document.getElementById('home').scrollIntoView({behavior:"smooth"});
+  }
 }

@@ -7,10 +7,10 @@
       <div class="menu">
           <ul id="nav-ul" class="false">
              <!-- <li><a href="https://deroussenicolas.fr/#accueil">Accueil</a></li>-->
-              <li><a href="http://localhost:4200/#home" [style.color]="color" on-mouseover='over(1)' (mouseout)='out(1)' id="menu_1">Accueil</a></li>
-              <li><a href="http://localhost:4200/#skills" [style.color]="color" on-mouseover='over(2)' (mouseout)='out(2)' id="menu_2">Compétences</a></li>
-              <li><a href="http://localhost:4200/#projects" [style.color]="color" on-mouseover='over(3)' (mouseout)='out(3)' id="menu_3">Projets</a></li>
-              <li><a href="http://localhost:4200/#contact" [style.color]="color" on-mouseover='over(4)' (mouseout)='out(4)' id="menu_4">Contact</a></li>
+              <li><a (click)="moveToSection(1)" [style.color]="color" on-mouseover='over(1)' (mouseout)='out(1)' id="menu_1">Accueil</a></li>
+              <li><a (click)="moveToSection(2)" [style.color]="color" on-mouseover='over(2)' (mouseout)='out(2)' id="menu_2">Compétences</a></li>
+              <li><a (click)="moveToSection(3)" [style.color]="color" on-mouseover='over(3)' (mouseout)='out(3)' id="menu_3">Projets</a></li>
+              <li><a (click)="moveToSection(4)" [style.color]="color" on-mouseover='over(4)' (mouseout)='out(4)' id="menu_4">Contact</a></li>
           </ul>
       </div>
   </nav>
@@ -38,12 +38,8 @@
   <span>a</span><span>c</span><span>k</span> 
   <!--  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span> 
   suis un développeur Java / Web junior full-stack-->
-  
-  
-  
-  
-  
   </h2>
+
 </section>
 <!-- Home -->
 
@@ -175,9 +171,81 @@
     <li>S</li>
   </ul>
 
+  <!--<div class="transition_3" ngsReveal >..</div>
+  <div class="transition_1" [ngsReveal]="{ reset: true}" >..</div>-->
 
+  <div class="flexbox">
+    <div class="flexbox_1"></div>
+    <div class="flexbox_2"></div>
+    <div class="flexbox_3"></div>
+    <div class="flexbox_4"></div>
+  </div>
+  <!--
+  <div class="main">
+    <ul class="cards">
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+      <div class="card_content">
+        <h2 class="card_title">Card Grid Layout</h2>
+        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+      <div class="card_content">
+        <h3 class="card_title">Card Grid Layout</h3>
+        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+      <div class="card_content">
+        <h3 class="card_title">Card Grid Layout</h3>
+        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards_item">
+    <div class="card">
+      <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+      <div class="card_content">
+        <h2 class="card_title">Card Grid Layout</h2>
+        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+        <button class="btn card_btn">Read More</button>
+      </div>
+    </div>
+  </li>
+    </ul>
+</div>
+-->
+    <!--
 
+    <div class="card_title">
+      Site pour des associations sportives
+    </div>
 
+    <div class="card_description">
+      Un site web (fictif) de diffusion d'informations par catégories pour chacun des sports.
+      Il regroupe les fonctionnalités : 
+      -Création/Modification et connexion de compte à son compte.
+      -Création/Modification et supression d'un article.
+      -Début des fonctionnalités du forum (Lecture uniquement)
+    </div>
+
+    <div class="card_img">
+      <img alt="card_projects_1" src="https://www.normandie.ars.sante.fr/system/files/styles/vignette_678x454/private/2020-05/Tests%20positifs.png?itok=T4K8qNnl" width="100%" height="100%">
+    </div>
+
+    <div class="card_link">Lien GitHub</div>
+-->
 
 
 
