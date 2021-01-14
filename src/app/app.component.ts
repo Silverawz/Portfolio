@@ -19,15 +19,23 @@ export class AppComponent implements OnInit {
   currentSection:number = 1;
   timer:number = 100;
   index:number = 0;
+  animationActiveSectionSkills:boolean = false;
+  animationActiveSectionProjects:boolean = false;
 
- 
   ngOnInit() {
+    window.addEventListener('scroll', this.animationOnScroll, true); //third parameter
+
     window.addEventListener('scroll', this.scroll, true); //third parameter
     this.typeWriter();
     particlesJS.load('particles-js', 'assets/data/particles.json');
     //, particlesJS.load('particles-js', 'assets/data/particles.json'function() { console.log('callback - particles.js config loaded'); });
     window.addEventListener('scroll', this.scroll2, true); //third parameter
   }
+
+
+
+
+
 
   scroll2 = (event): void => {
     this.backAllToInitialColor();
@@ -89,9 +97,6 @@ export class AppComponent implements OnInit {
     document.getElementById('menu_3').style.color = actualColor;
     document.getElementById('menu_4').style.color = actualColor;
   }
-  // ngOnDestroy() {
-  //   window.removeEventListener('scroll', this.scroll, true);
-  // }
 
  
   scroll = (event): void => {
@@ -116,27 +121,6 @@ export class AppComponent implements OnInit {
    
   }
 
-
-  /*
-  $(document).ready(function()
-  {
-      $(".hamburger").on("click", function(){
-          $("nav ul").toggleClass("menu");
-      });
-  });
-  
-  
-  
-  
-          $(window).on("scroll", function() {
-              if($(window).scrollTop()){
-                              $('nav').addClass('scroll');
-                          }
-                          else{
-                          $('nav').removeClass('scroll');
-                          }
-          }) */
-
   moveToSection(sectionNumber){
     if(sectionNumber == 1) document.getElementById('home').scrollIntoView({behavior:"smooth"});
     else if(sectionNumber == 2) document.getElementById('skills').scrollIntoView({behavior:"smooth"});
@@ -144,4 +128,65 @@ export class AppComponent implements OnInit {
     else if(sectionNumber == 4) document.getElementById('contact').scrollIntoView({behavior:"smooth"});
     else document.getElementById('home').scrollIntoView({behavior:"smooth"});
   }
+
+
+
+  animationOnScroll = (event): void => {
+    console.log(window.scrollY);
+
+    /**section skills */
+    if(!this.animationActiveSectionSkills){
+      if(window.scrollY >= 700 && window.scrollY < 1200){
+        let elements1 = document.getElementsByClassName('description_1_items');
+        let elements2 = document.getElementsByClassName('description_2_items');
+        let elements3 = document.getElementsByClassName('description_3_items');
+        for(let i=0; i < elements3.length; i++){
+          if(i<6){
+            elements1[i].className = "description_1_items animate_description";
+            elements2[i].className = "description_2_items animate_description";
+            elements3[i].className = "description_3_items animate_description";
+          }else{
+            elements3[i].className = "description_3_items animate_description";
+          }
+        }
+        this.animationActiveSectionSkills = true;
+      }
+    }
+    else if(this.animationActiveSectionSkills){
+      if(window.scrollY < 700){
+        let elements1 = document.getElementsByClassName('description_1_items');
+        let elements2 = document.getElementsByClassName('description_2_items');
+        let elements3 = document.getElementsByClassName('description_3_items');
+        for(let i=0; i < elements3.length; i++){
+          if(i<6){
+            elements1[i].className = "description_1_items";
+            elements2[i].className = "description_2_items";
+            elements3[i].className = "description_3_items";
+          }else{
+            elements3[i].className = "description_3_items";
+          }
+        }
+        this.animationActiveSectionSkills = false;
+      }
+    }
+
+    /**section projects */
+    if(!this.animationActiveSectionProjects){
+
+
+    }
+
+
+    else if(this.animationActiveSectionProjects){
+
+
+    } 
+  }
+
+
+
+
+
+
+
 }
