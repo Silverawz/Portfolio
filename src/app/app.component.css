@@ -21,51 +21,68 @@
 
 .flex-container {
   display: flex;
-  flex-direction: column;
+ /* flex-wrap: wrap;*/
+ flex-direction:column;
 }
+
+.flex-container > div {
+  flex: 1 0 26%;
+  flex-basis: 34%;
+}
+
+/*
+@media ( max-width: 900px) {
+  .flex-container > div {
+    flex-basis: 34%;
+  }
+}
+
+@media ( max-width: 600px) {
+  .flex-container > div {
+    flex-basis: 51%;
+  }
+} */
 
 /* non-essential demo styles */
-.flex-container > div:nth-child(1) {
-  height: 350px;
-  margin-right: 120px;
-  margin-left: 300px;
-  margin-top: 50px;
-  margin-bottom: 20px;
+.flex-container > div {
+  position:relative;
+  top:45%;
+  left:50%;
+  margin-top:100px;
+  margin-bottom:100px;
+  transform:translate(-50%,-5%);
+  height: 400px;
+  width: 800px;
   background-color: lightgreen;
   border: 2px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-}
-.flex-container > div:nth-child(2) {
-  height: 350px;
-  margin-right: 300px;
-  margin-left: 120px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  background-color: lightgreen;
-  border: 2px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-}
-.flex-container > div:nth-child(3) {
-  height: 350px;
-  margin-right: 120px;
-  margin-left: 300px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  background-color: lightgreen;
-  border: 2px solid white;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
 }
 
+.img_projects_1_1{
+  position:relative;
+  top:-135px;
+  left:-60px;
+  height:150px;
+  width:350px;
+  background-image: url("../assets/img/home_background.png");
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
 
+.img_projects_1_2{
+  position:relative;
+  right:-100px;
+  bottom:-100px;
+  height:150px;
+  width:350px;
+  border: 20px solid rgb(255, 0, 0);
+ /* background-image: url("../assets/img/home_background.png");*/
+  background:rgb(238, 89, 89);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
 /*
 
 .main{
@@ -766,7 +783,7 @@ img {
   #home{
     /*background-image: url("../assets/img/home_background.png") no-repeat 50% 50%;*/
     background-image: url("../assets/img/home_background.png");
-    
+        /*clip-path: polygon(10% 7%, 91% 7%, 91% 93%, 9% 93%);*/
     background-size:cover;
     background-position: top;
     background-color:rgb(102, 156, 218);
