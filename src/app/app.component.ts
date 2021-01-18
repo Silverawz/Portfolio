@@ -132,8 +132,6 @@ export class AppComponent implements OnInit {
 
 
   animationOnScroll = (event): void => {
-    console.log(window.scrollY);
-
     /**section skills */
     if(!this.animationActiveSectionSkills){
       if(window.scrollY >= 700 && window.scrollY < 1200){
