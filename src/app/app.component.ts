@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   timer:number = 100;
   index:number = 0;
   animationActiveSectionSkills:boolean = false;
-  animationActiveSectionProjects:boolean = false;
+  animationActiveSectionProjects:boolean[] = [false, false, false];
 
   ngOnInit() {
     window.addEventListener('scroll', this.animationOnScroll, true); //third parameter
@@ -132,6 +132,7 @@ export class AppComponent implements OnInit {
 
 
   animationOnScroll = (event): void => {
+    console.log(window.scrollY);
     /**section skills */
     if(!this.animationActiveSectionSkills){
       if(window.scrollY >= 700 && window.scrollY < 1200){
@@ -167,18 +168,68 @@ export class AppComponent implements OnInit {
         this.animationActiveSectionSkills = false;
       }
     }
+    /**section skills end*/
+
 
     /**section projects */
-    if(!this.animationActiveSectionProjects){
-
-
+    /*1*/
+    if(!this.animationActiveSectionProjects[0]){
+      if(window.scrollY >= 1788 && window.scrollY < 2350){
+        let elements1 = document.getElementsByClassName('image_card_odd_1');
+        let elements2 = document.getElementsByClassName('description_card_1');
+        elements1[0].className = "image_card_odd_1 move_animation_img";
+        elements2[0].className = "description_card_1 move_animation_p";
+        this.animationActiveSectionProjects[0] = true;
+      }
     }
-
-
-    else if(this.animationActiveSectionProjects){
-
-
+    else if(this.animationActiveSectionProjects[0]){
+      if(window.scrollY < 1788){
+        let elements1 = document.getElementsByClassName('image_card_odd_1 move_animation_img');
+        let elements2 = document.getElementsByClassName('description_card_1 move_animation_p');
+        elements1[0].className = "image_card_odd_1";
+        elements2[0].className = "description_card_1";
+        this.animationActiveSectionProjects[0] = false;
+      }
     } 
+    /*2*/
+    if(!this.animationActiveSectionProjects[1]){
+      if(window.scrollY >= 2395 && window.scrollY < 2995){
+        let elements1 = document.getElementsByClassName('image_card_even');
+        let elements2 = document.getElementsByClassName('description_card_even');
+        elements1[0].className = "image_card_even move_animation_img_even";
+        elements2[0].className = "description_card_even move_animation_p_even";
+        this.animationActiveSectionProjects[1] = true;
+      }
+    }
+    else if(this.animationActiveSectionProjects[1]){
+      if(window.scrollY < 2395){
+        let elements1 = document.getElementsByClassName('image_card_even move_animation_img_even');
+        let elements2 = document.getElementsByClassName('description_card_even move_animation_p_even');
+        elements1[0].className = "image_card_even";
+        elements2[0].className = "description_card_even";
+        this.animationActiveSectionProjects[1] = false;
+      }
+    }
+    /*3*/
+    if(!this.animationActiveSectionProjects[2]){
+      if(window.scrollY >= 2965 && window.scrollY < 3365){
+        let elements1 = document.getElementsByClassName('image_card_odd_2');
+        let elements2 = document.getElementsByClassName('description_card_3');
+        elements1[0].className = "image_card_odd_2 move_animation_img";
+        elements2[0].className = "description_card_3 move_animation_p";
+        this.animationActiveSectionProjects[2] = true;
+      }
+    }
+    else if(this.animationActiveSectionProjects[2]){
+      if(window.scrollY < 2965){
+        let elements1 = document.getElementsByClassName('image_card_odd_2 move_animation_img');
+        let elements2 = document.getElementsByClassName('description_card_3 move_animation_p');
+        elements1[0].className = "image_card_odd_2";
+        elements2[0].className = "description_card_3";
+        this.animationActiveSectionProjects[2] = false;
+      }
+    }
+        /**section projects end*/
   }
 
 
