@@ -39,22 +39,20 @@ export class AppComponent implements OnInit {
 
   scroll2 = (event): void => {
     this.backAllToInitialColor();
-    if(window.scrollY >= 0 && window.scrollY < 1146){
+    if(window.scrollY >= 0 && window.scrollY < 700 ){
       document.getElementById('menu_1').style.color = "green";
       if(this.currentSection != 1) this.currentSection = 1;
-    }  else if(window.scrollY >= 1146 && window.scrollY < 2330){
+    }  else if(window.scrollY >= 700 && window.scrollY < 1800){
       document.getElementById('menu_2').style.color = "green";
       if(this.currentSection != 2) this.currentSection = 2;
-    } else if(window.scrollY >= 2330 && window.scrollY < 3381){
+    } else if(window.scrollY >= 1800 && window.scrollY < 4000){
       document.getElementById('menu_3').style.color = "green";
       if(this.currentSection != 3) this.currentSection = 3;
-    } else if(window.scrollY >= 3381){
+    } else if(window.scrollY >= 4000){
       document.getElementById('menu_4').style.color = "green";
       if(this.currentSection != 4) this.currentSection = 4;
     }
   }
-
-
 
 
   typeWriter() {
@@ -229,7 +227,7 @@ export class AppComponent implements OnInit {
         this.animationActiveSectionProjects[2] = false;
       }
     }
-        /**section projects end*/
+    /**section projects end*/
   }
 
 
