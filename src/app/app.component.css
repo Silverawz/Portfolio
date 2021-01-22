@@ -20,20 +20,125 @@
 
 
 #contact{
-
+  margin-top:0;
+  text-align: center;
+  background: #f3f3f3;  
 }
 
-#contact > h1{
-  color:white;
+#contact > h4{
+  margin-top:250px;
+  color:rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size:36px;
+  letter-spacing: 3px;
+  display: inline-block;
 }
 
-#contact > p{
-  color:white;
+#contact > h4 > span{ 
+  text-shadow: 0.5px 0.5px 0.5px rgb(255, 255, 255);
+  display: inline-block;
 }
 
+h4 > span.animation_span:nth-child(1){
+  animation: animateLetter1 1.4s ease-out;
+}
+h4 > span.animation_span:nth-child(2){
+  animation: animateLetter2 1.4s ease-out;
+}
+h4 > span.animation_span:nth-child(3){
+  animation: animateLetter3 1.4s ease-out;
+}
+h4 > span.animation_span:nth-child(4){
+  animation: animateLetter4 1.4s ease-out;
+}
+h4 > span.animation_span:nth-child(5){
+  animation: animateLetter5 1.4s ease-out;
+}
+h4 > span.animation_span:nth-child(6){
+  animation: animateLetter6 1.4s ease-out;
+}
+h4 > span.animation_span:nth-child(7){
+  animation: animateLetter7 1.4s ease-out;
+}
+@keyframes animateLetter1 {
+  33% {
+    transform: translate(440px, 50%);
+    color:#000000;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+  100%{
+    color:#ffffff;
+    transform: translate(0, 0);
+  }
+}
 
+@keyframes animateLetter2 {
+  33% {
+    transform: translate(-240px, -50%);
+    color:#000000;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+  100%{
+    color:#ffffff;
+    transform: translate(0, 0);
+  }
+}
 
-
+@keyframes animateLetter3 {
+  33% {
+    transform: translate(0px, -250%);
+    color:#000000;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+  100%{
+    color:#ffffff;
+    transform: translate(0, 0);
+  }
+}
+@keyframes animateLetter4 {
+  33% {
+    transform: translate(240px, -50%);
+    color:#000000;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+  100%{
+    color:#ffffff;
+    transform: translate(0, 0);
+  }
+}
+@keyframes animateLetter5 {
+  33% {
+    transform:translateY(175%);
+    color:#000000;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+  100%{
+    color:#ffffff;
+    transform: translate(0, 0);
+  }
+}
+@keyframes animateLetter6 {
+  33%{
+    transform: translate(360px, -75%);
+    color:#000000;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+  100%{
+    color:#ffffff;
+    transform: translate(0, 0);
+  }
+}
+@keyframes animateLetter7 {
+  33%{
+    transform: translateY(-150px);
+    color:#000000;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+  100%{
+    color:#ffffff;
+    transform: translate(0, 0);
+  }
+}
 
 
 
@@ -41,12 +146,16 @@
 
 
 #projects{
-  background: rgb(203,202,202);
+  background: #DADED4;  
+  background: linear-gradient(180deg, #cfdfd8 0%, #868788 100%);
+  /*
+  background: linear-gradient(90deg, rgb(197, 197, 197) 0%, rgb(99, 99, 99) 100%);
   background: linear-gradient(45deg, rgba(203,202,202,1) 0%, rgb(160, 160, 160) 100%);
-  background-image: url("../assets/img/background_projects.jpg");
+  background-image: url("../assets/img/test.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  */
   height:2100px;      
   box-sizing: border-box;
 }
@@ -110,8 +219,6 @@
   background-size: cover;
   display: block;
   overflow: hidden;
-  border: solid rgb(92, 92, 92);
-  border-width: 0.3px;
   clip-path: polygon(0 14%, 100% 3%, 76% 100%, 0 84%);
   transform:translateX(500%);
   opacity:0;
@@ -141,8 +248,6 @@
   background-size: cover;
   display: block;
   overflow: hidden;
-  border: solid rgb(92, 92, 92);
-  border-width: 0.3px;
   clip-path: polygon(0 0, 100% 17%, 88% 85%, 14% 100%);
   transform:translateX(-500%);
   opacity:0;
@@ -168,8 +273,6 @@
   background-size: cover;
   display: block;
   overflow: hidden;
-  border: solid rgb(92, 92, 92);
-  border-width: 0.3px;
   clip-path: polygon(0 14%, 100% 3%, 76% 100%, 0 84%);
   transform:translateX(500%);
   animation-delay: 1.2s;
@@ -209,6 +312,7 @@
 }
 .description_card_1 > p{
   opacity:0;
+  font-family: 'Quantico','Times New Roman', Times, serif;
 }
 
 .description_card_1.move_animation_p > p:nth-child(1){
@@ -239,7 +343,7 @@
   overflow: hidden;
   margin-top:5%;
   position:relative;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Quantico','Times New Roman', Times, serif;
   font-size:16px;
   text-align: center;
 }
@@ -272,6 +376,7 @@
 }
 .description_card_3 > p{
   opacity:0;
+  font-family: 'Quantico','Times New Roman', Times, serif;
 }
 .description_card_3.move_animation_p > p:nth-child(1){
   animation: 1s slide 2s forwards;
@@ -309,10 +414,80 @@
 }
 
 
+
+.link_github{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link_github > a{
+  font-size: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  color: rgb(0, 0, 0);
+  /*
+  width:70%;
+  border: 0;
+  padding: 0 20px;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  color: #f4f4f4;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: #cc3b53;
+  background-image: linear-gradient(to top left,rgba(0,0,0,.2),rgba(0,0,0,.2) 30%,transparent);
+  box-shadow: inset 2px 2px 3px hsl(0deg 0% 100% / 60%), inset -2px -2px 3px rgb(0 0 0 / 60%);
+  */
+}
+
+.btn_card{
+  text-decoration: none;
+  /*
+  border: 1px solid rgb(146, 148, 248);
+  */
+  border: 1px solid rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn_card:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  border-color: rgb(78, 140, 255);
+}
+
+.btn_card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgb(135, 177, 255),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn_card:hover:before {
+  left: 100%;
+}
+
+.link_github > a:hover{
+  color: rgb(78, 140, 255);
+}
+
+/*
 .link_github_odd, .link_github_even{
   width: 100%;
   text-align: center;
 }
+
 
 
 .link_github_odd > a{
@@ -362,16 +537,17 @@
 
 
 
-.link_github_odd > a:hover{
-  background-color: #573901;
-}
+.link_github_odd > a:hover, .link_github_even > a:hover, #second_odd_link:hover{
+  background-color: #ffffff;
+}*/
+/*
 .link_github_even > a:hover{
   background-color: #2b0121;
 }
 #second_odd_link:hover{
   background-color: #01611e;
 }
-
+*/
 .separator1{
   width:33%;
   margin-left:33%;
