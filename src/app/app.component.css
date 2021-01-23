@@ -44,121 +44,111 @@ h4 > span.animation_span:nth-child(1){
 }
 h4 > span.animation_span:nth-child(2){
   animation: animateLetter2 1.4s ease-out;
+  animation-delay:0.1s;
 }
 h4 > span.animation_span:nth-child(3){
   animation: animateLetter3 1.4s ease-out;
+  animation-delay:0.2s;
 }
 h4 > span.animation_span:nth-child(4){
   animation: animateLetter4 1.4s ease-out;
+  animation-delay:0.3s;
 }
 h4 > span.animation_span:nth-child(5){
   animation: animateLetter5 1.4s ease-out;
+  animation-delay:0.4s;
 }
 h4 > span.animation_span:nth-child(6){
   animation: animateLetter6 1.4s ease-out;
+  animation-delay:0.5s;
 }
 h4 > span.animation_span:nth-child(7){
   animation: animateLetter7 1.4s ease-out;
+  animation-delay:0.6s;
 }
+
 @keyframes animateLetter1 {
-  33% {
-    transform: translate(440px, 50%);
+  0%,100%{
+    transform: translate(0px) rotate(0deg);
+    color:#000000;
+  }
+  50% {
+    transform: translate(-500px, 0px) rotate(360deg);
     color:#000000;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
   }
-  100%{
-    color:#ffffff;
-    transform: translate(0, 0);
-  }
 }
-
 @keyframes animateLetter2 {
-  33% {
-    transform: translate(-240px, -50%);
+  0%,100%{
+    transform: translate(0px) rotate(0deg);
+    color:#000000;
+  }
+  50% {
+    transform: translate(-550px, -250px) rotate(360deg);
     color:#000000;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  }
-  100%{
-    color:#ffffff;
-    transform: translate(0, 0);
   }
 }
-
 @keyframes animateLetter3 {
-  33% {
-    transform: translate(0px, -250%);
+  0%,100%{
+    transform: translate(0px) rotate(0deg);
+    color:#000000;
+  }
+  50% {
+    transform: translate(0px, 150px) rotate(360deg);
     color:#000000;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  }
-  100%{
-    color:#ffffff;
-    transform: translate(0, 0);
   }
 }
 @keyframes animateLetter4 {
-  33% {
-    transform: translate(240px, -50%);
+  0%,100%{
+    transform: translate(0px) rotate(0deg);
+    color:#000000;
+  }
+  50% {
+    transform: translate(0px, -250px) rotate(360deg);
     color:#000000;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  }
-  100%{
-    color:#ffffff;
-    transform: translate(0, 0);
   }
 }
 @keyframes animateLetter5 {
-  33% {
-    transform:translateY(175%);
+  0%,100%{
+    transform: translate(0px) rotate(0deg);
+    color:#000000;
+  }
+  50% {
+    transform: translate(250px, 250px) rotate(360deg);
     color:#000000;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  }
-  100%{
-    color:#ffffff;
-    transform: translate(0, 0);
   }
 }
+
 @keyframes animateLetter6 {
-  33%{
-    transform: translate(360px, -75%);
+  0%,100%{
+    transform: translate(0px) rotate(0deg);
+    color:#000000;
+  }
+  50% {
+    transform: translate(450px, -75%) rotate(360deg);
     color:#000000;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  }
-  100%{
-    color:#ffffff;
-    transform: translate(0, 0);
   }
 }
 @keyframes animateLetter7 {
-  33%{
-    transform: translateY(-150px);
+  0%,100%{
+    transform: translate(0px) rotate(0deg);
+    color:#000000;
+  }
+  50% {
+    transform: translate(550px, -250px) rotate(360deg);
     color:#000000;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
   }
-  100%{
-    color:#ffffff;
-    transform: translate(0, 0);
-  }
 }
 
 
 
 
-
-
-#projects{
-  background: #DADED4;  
-  background: linear-gradient(180deg, #cfdfd8 0%, #868788 100%);
-  /*
-  background: linear-gradient(90deg, rgb(197, 197, 197) 0%, rgb(99, 99, 99) 100%);
-  background: linear-gradient(45deg, rgba(203,202,202,1) 0%, rgb(160, 160, 160) 100%);
-  background-image: url("../assets/img/test.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  */
-  height:2100px;      
-  box-sizing: border-box;
-}
 
 
 .container_cards{
@@ -167,6 +157,7 @@ h4 > span.animation_span:nth-child(7){
   flex-direction:column;
   position:relative;
 }
+
 
 .card_odd{
   position:relative;
@@ -220,6 +211,7 @@ h4 > span.animation_span:nth-child(7){
   display: block;
   overflow: hidden;
   clip-path: polygon(0 14%, 100% 3%, 76% 100%, 0 84%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   transform:translateX(500%);
   opacity:0;
 }
@@ -249,6 +241,8 @@ h4 > span.animation_span:nth-child(7){
   display: block;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 17%, 88% 85%, 14% 100%);
+  clip-path: polygon(0 23%, 80% 0, 100% 78%, 20% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   transform:translateX(-500%);
   opacity:0;
   animation-delay: 1.2s;
@@ -274,6 +268,8 @@ h4 > span.animation_span:nth-child(7){
   display: block;
   overflow: hidden;
   clip-path: polygon(0 14%, 100% 3%, 76% 100%, 0 84%);
+  clip-path: polygon(21% 0, 100% 19%, 83% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   transform:translateX(500%);
   animation-delay: 1.2s;
   opacity:0;
@@ -548,25 +544,55 @@ h4 > span.animation_span:nth-child(7){
   background-color: #01611e;
 }
 */
+
+
+
+#projects{
+  background: rgb(192, 218, 226);  /*
+  background: linear-gradient(180deg, #cfdfd8 0%, #868788 100%);
+  
+  background: linear-gradient(90deg, rgb(197, 197, 197) 0%, rgb(99, 99, 99) 100%);
+  background: linear-gradient(45deg, rgba(203,202,202,1) 0%, rgb(160, 160, 160) 100%);
+  background-image: url("../assets/img/test.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  */
+  height:2100px;      
+  box-sizing: border-box;
+}
+
+.container_card_2{
+  background:rgb(179, 247, 205);
+}
+.container_card_3{
+  background:rgb(233, 235, 167);
+}
+
 .separator1{
-  width:33%;
-  margin-left:33%;
-  margin-right:33%;
-  height:1px;
-  background:rgb(199, 80, 0);
-  margin-top:50px;
-  margin-bottom:75px;
+  width:100%;
+  height:100px;
+  position:relative;
+  left:0px;
+  background: linear-gradient(to right bottom,rgb(192, 218, 226)  49%, rgb(179, 247, 205) 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
 }
 
 .separator2{
-  width:33%;
-  margin-left:33%;
-  margin-right:33%;
-  height:1px;
-  background : rgb(70, 0, 110);
-  margin-top:50px;
-  margin-bottom:75px;
+  width:100%;
+  height:100px;
+  position:relative;
+  left:0px;
+  background: linear-gradient(to left bottom,rgb(179, 247, 205) 49%,  rgb(233, 235, 167) 50%);
 }
+
+.separator3{
+  width:100%;
+  height:100px;
+  position:relative;
+  left:0px;
+  background: linear-gradient(to right bottom,rgb(233, 235, 167)  49%, rgb(233, 235, 167) 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+}
+
 
 
 
