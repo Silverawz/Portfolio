@@ -44,10 +44,10 @@ export class AppComponent implements OnInit {
     }  else if(window.scrollY >= 700 && window.scrollY < 1800){
       document.getElementById('menu_2').style.color = "green";
       if(this.currentSection != 2) this.currentSection = 2;
-    } else if(window.scrollY >= 1800 && window.scrollY < 4000){
+    } else if(window.scrollY >= 1800 && window.scrollY < 4350){
       document.getElementById('menu_3').style.color = "green";
       if(this.currentSection != 3) this.currentSection = 3;
-    } else if(window.scrollY >= 4000){
+    } else if(window.scrollY >= 4350){
       document.getElementById('menu_4').style.color = "green";
       if(this.currentSection != 4) this.currentSection = 4;
     }
@@ -230,7 +230,7 @@ export class AppComponent implements OnInit {
 
     /**section contact */
     if(!this.animationActiveSection[4]){
-      if(window.scrollY >= 3750 && window.scrollY < 4100){
+      if(window.scrollY >= 4100 && window.scrollY < 4350){
         for(let i=1; i < 8; i++) {
           document.getElementById('span'+i).className = "animation_span";
         }
@@ -238,7 +238,7 @@ export class AppComponent implements OnInit {
       }
     }
     else if(this.animationActiveSection[4]){
-      if(window.scrollY < 3750){
+      if(window.scrollY < 4100){
         for(let i=1; i < 8; i++) {
           document.getElementById('span'+i).className = "";
         }

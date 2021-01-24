@@ -185,15 +185,17 @@ h4 > span.animation_span:nth-child(7){
 }
 
 #title_card_1{
-  color:#a36513;
+  color:#000000;
 }
 
 #title_card_2{
-  color:rgb(50, 0, 107);
+  margin-top:100px;
+  color:rgb(255, 255, 255);
 }
 
 #title_card_3{
-  color:rgb(0, 95, 0);
+  margin-top:100px;
+  color:#000000;
 }
 
 .image_card_odd_1{
@@ -234,7 +236,7 @@ h4 > span.animation_span:nth-child(7){
   margin-left:10%;
   width: 300px;
   height: 300px;
-  background-image: url("../assets/img/Bibliothèque.jpg");
+  background-image: url("../assets/img/project2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -309,6 +311,7 @@ h4 > span.animation_span:nth-child(7){
 .description_card_1 > p{
   opacity:0;
   font-family: 'Quantico','Times New Roman', Times, serif;
+  color:#000000;
 }
 
 .description_card_1.move_animation_p > p:nth-child(1){
@@ -343,6 +346,13 @@ h4 > span.animation_span:nth-child(7){
   font-size:16px;
   text-align: center;
 }
+
+.description_card_even > p{
+  opacity:0;
+  font-family: 'Quantico','Times New Roman', Times, serif;
+  color:white;
+}
+
 .description_card_even.move_animation_p_even > p:nth-child(1){
   animation: 1s slide 2s forwards;
   animation-delay: 0.2s;
@@ -373,6 +383,7 @@ h4 > span.animation_span:nth-child(7){
 .description_card_3 > p{
   opacity:0;
   font-family: 'Quantico','Times New Roman', Times, serif;
+  color:#000000;
 }
 .description_card_3.move_animation_p > p:nth-child(1){
   animation: 1s slide 2s forwards;
@@ -419,39 +430,61 @@ h4 > span.animation_span:nth-child(7){
   align-items: center;
 }
 
-.link_github > a{
+.btn_card_even{
   font-size: 1.5rem;
   padding: 0.6rem 1.5rem;
-  color: rgb(0, 0, 0);
-  /*
-  width:70%;
-  border: 0;
-  padding: 0 20px;
-  font-size: 1.6rem;
-  text-align: center;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  color: #f4f4f4;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-  background-color: #cc3b53;
-  background-image: linear-gradient(to top left,rgba(0,0,0,.2),rgba(0,0,0,.2) 30%,transparent);
-  box-shadow: inset 2px 2px 3px hsl(0deg 0% 100% / 60%), inset -2px -2px 3px rgb(0 0 0 / 60%);
-  */
+  border: 1px solid rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  margin-bottom:75px;
+}
+
+.btn_card_even:hover {
+  box-shadow: 1px 1px 25px 10px rgba(248, 146, 243, 0.4);
+  border-color: rgb(204, 104, 243);
+  color: rgb(211, 155, 233);
+}
+.btn_card_even:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgb(245, 135, 255),
+    transparent
+  );
+  transition: all 650ms;
+}
+.btn_card_even:hover:before {
+  left: 100%;
+}
+
+.btn_card_even > a:hover{
+  color: rgb(205, 78, 255);
 }
 
 .btn_card{
+  font-size: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  /*
-  border: 1px solid rgb(146, 148, 248);
-  */
   border: 1px solid rgb(0, 0, 0);
   position: relative;
   overflow: hidden;
+  margin-bottom:75px;
 }
 
 .btn_card:hover {
   box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
   border-color: rgb(78, 140, 255);
+  color: rgb(78, 140, 255);
 }
 
 .btn_card:before {
@@ -474,9 +507,6 @@ h4 > span.animation_span:nth-child(7){
   left: 100%;
 }
 
-.link_github > a:hover{
-  color: rgb(78, 140, 255);
-}
 
 /*
 .link_github_odd, .link_github_even{
@@ -548,7 +578,7 @@ h4 > span.animation_span:nth-child(7){
 
 
 #projects{
-  background: rgb(192, 218, 226);  /*
+  background: rgb(255, 255, 255);  /*
   background: linear-gradient(180deg, #cfdfd8 0%, #868788 100%);
   
   background: linear-gradient(90deg, rgb(197, 197, 197) 0%, rgb(99, 99, 99) 100%);
@@ -558,15 +588,15 @@ h4 > span.animation_span:nth-child(7){
   background-position: center;
   background-size: cover;
   */
-  height:2100px;      
+  height:2400px;      
   box-sizing: border-box;
 }
 
 .container_card_2{
-  background:rgb(179, 247, 205);
+  background: #7451eb;
 }
 .container_card_3{
-  background:rgb(233, 235, 167);
+  background:rgb(255, 255, 255);
 }
 
 .separator1{
@@ -574,7 +604,7 @@ h4 > span.animation_span:nth-child(7){
   height:100px;
   position:relative;
   left:0px;
-  background: linear-gradient(to right bottom,rgb(192, 218, 226)  49%, rgb(179, 247, 205) 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+  background: linear-gradient(to right bottom,rgb(255, 255, 255)  49%,#7451eb 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
 }
 
 .separator2{
@@ -582,7 +612,7 @@ h4 > span.animation_span:nth-child(7){
   height:100px;
   position:relative;
   left:0px;
-  background: linear-gradient(to left bottom,rgb(179, 247, 205) 49%,  rgb(233, 235, 167) 50%);
+  background: linear-gradient(to left bottom,#7451eb 49%,  rgb(255, 255, 255) 50%);
 }
 
 .separator3{
@@ -590,7 +620,7 @@ h4 > span.animation_span:nth-child(7){
   height:100px;
   position:relative;
   left:0px;
-  background: linear-gradient(to right bottom,rgb(233, 235, 167)  49%, rgb(233, 235, 167) 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+  background: linear-gradient(to right bottom,rgb(255, 255, 255)  49%, rgb(255, 255, 255) 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
 }
 
 
