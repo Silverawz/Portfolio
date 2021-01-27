@@ -8,17 +8,44 @@
 
 
 
+  
 
 
 
 
+.btn_linkedin{
+  font-size: 22px;
+  padding: 4px 6px;
+  color: rgb(96, 25, 124);
+  text-decoration: none;
+  border: 1px solid rgb(204, 104, 243);
+  border-radius:5px;
+  position: relative;
+  overflow: hidden;
+}
 
+.btn_linkedin:hover {
+  box-shadow: 1px 1px 25px 10px rgba(248, 146, 243, 0.4);
+  border-color: rgb(204, 104, 243);
+  color: rgb(200, 122, 231);
+}
 
+.btn_github{
+  font-size: 22px;
+  padding: 4px 6px;
+  color: rgb(11, 67, 139);
+  text-decoration: none;
+  border: 1px solid rgb(64, 146, 201);
+  border-radius:5px;
+  position: relative;
+  overflow: hidden;
+}
 
-
-
-
-
+.btn_github:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 165, 248, 0.4);
+  border-color: rgb(64, 146, 201);
+  color: rgb(66, 143, 243);
+}
 
 
 
@@ -37,10 +64,19 @@
  margin-top:75px;
  text-align: center;
 }
+
 .contact_container > p{
   font-size:20px;
   font-family:Georgia, 'Times New Roman', Times, serif;
- }
+}
+
+.contact_container > p:nth-child(1){
+  margin-bottom:70px;
+}
+
+.contact_container > p:nth-child(2){
+  margin-bottom:40px;
+}
 
 .mailto{
   color: rgb(20, 10, 151);
@@ -49,7 +85,7 @@
 #contact{
   margin-top:0;
   text-align: center;
-  background: #f3f3f3;  
+  background: #ffffff;  
 }
 
 #contact > h4{
@@ -493,7 +529,6 @@ h4 > span.animation_span:nth-child(7){
   color: rgb(255, 255, 255);
   text-decoration: none;
   border: 1px solid rgb(255, 255, 255);
-  color:rgb(255, 255, 255);
   position: relative;
   overflow: hidden;
   margin-bottom:75px;
@@ -1388,7 +1423,7 @@ h4 > span.animation_span:nth-child(7){
      text-shadow: rgb(0, 0, 0) 1px 0 1px;
    }
 
-/* Animation */
+/* Animation 
 h2.message2 {
   width:auto;
   height:auto;
@@ -1403,7 +1438,7 @@ h2.message2 {
   text-shadow: rgb(0, 0, 0) 1px 0 1px;
   overflow: hidden;
   animation: animated-text 2s steps(17, end) 1s 1 normal both;
-  }
+  }*/
 
   /* text animation */
   @keyframes animated-text {
@@ -1417,18 +1452,41 @@ h2.message2 {
   }
 
   h2.message3 {
-    width:auto;
-    height:auto;
-    position: absolute;
-    top:75%;
+    width:100%;
+    height:700px; 
+  
+    position:absolute;
+
+   /*
+    top:60%;
+    left:10%;
+    right:10%;
+    
+    transform:translate(-40%,-50%);
+    
+    transform:translate(-50%,-50%);
+    
+    top:60%;
     left:50%;
     transform:translate(-50%,-50%);
+    */
     font-family: 'Quantico', cursive; 
     font-size: 36px;
     letter-spacing: 1px; 
     color:rgb(0, 0, 0);
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     overflow: hidden;
+  }
+
+  .container_msg{
+    margin-top:200px;
+    width:100%;
+    height:200px; 
+    position:absolute;
+    text-align: center;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
   }
 
 .message3 span {
@@ -1580,7 +1638,6 @@ h2.message2 {
 .message3 span:nth-of-type(43){
 	animation-delay: 2.1s;
 }
-
 
 
 
