@@ -85,7 +85,11 @@
 #contact{
   margin-top:0;
   text-align: center;
-  background: #ffffff;  
+  background: #cfcfcf;  
+  background-image: url("../assets/img/k.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #contact > h4{
@@ -1776,23 +1780,6 @@ nav.scroll ul{
 }
 
 
-
-/*
-@media(min-width:580) and (max-width: 760px){
-    .message{
-        margin-left:13%;
-        font-size: 18px;
-    }
-
-    h2#message2{
-        margin-left:9%;
-        font-size: 10px;
-    }
-}*/
-
-
-
-
 h1{
     font-size: 50px;
     padding-top: 250px;
@@ -1801,7 +1788,92 @@ h1{
 
 
 
-@media(max-width: 580px){
+
+
+
+
+
+
+@media(min-width: 319px) and (max-width: 460px){
+  .hamburger{
+    display: block;
+  }  
+  .logo{
+      position:fixe;
+      top:0;
+  }
+  nav ul{
+      width:100%;
+      max-height: 0px;
+      background:#000; 
+      overflow: visible;
+  }
+  .menu{
+      max-width: 20em;
+  }
+  nav ul li{
+      width:460px;
+      padding: 14px 0;
+      background:rgb(0, 0, 0); 
+  }
+  nav ul.false li{
+      display: none;     
+  }
+  h2.message{
+    font-size: 17px;
+  }
+  h2.message2{
+    font-size: 12px;
+  }
+  h2.message3{
+    font-size: 17px;
+  }
+  #skills_title li{
+    font-size: 12px;
+  }
+  #projects_title li{
+    font-size: 15px;
+  }
+  #img_skills_1, #img_skills_2, #img_skills_3{
+    width: 90px;
+    height: 90px;
+  }
+  .container_skills_1>h3,.container_skills_2>h3,.container_skills_3>h3{
+    width:75px;
+    font-size:14px;
+  }
+  #description_1>p ,#description_2>p,#description_3>p{
+    font-size:11px;
+    letter-spacing: 0px;
+  }
+  .description_1_items,.description_2_items,.description_3_items{
+    width:60px;
+    padding:2px;
+  }
+
+  .image_card_odd_1,.image_card_even,.image_card_odd_2{
+    margin-top:100px;
+    width:125px;
+    height:125px;
+  }
+  .image_card_even{
+    margin-left:10%;
+  } 
+  .description_card_1 > p,.description_card_even > p,.description_card_3 > p{
+    font-size:10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 460px) and (max-width: 580px){
   .hamburger{
       display: block;
   }  
@@ -1866,7 +1938,7 @@ h1{
     margin-left:10%;
   } 
   .description_card_1 > p,.description_card_even > p,.description_card_3 > p{
-    font-size:13px;
+    font-size:12px;
   }
   .title_card{
     font-size:18px;
