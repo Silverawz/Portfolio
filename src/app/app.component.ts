@@ -25,29 +25,7 @@ export class AppComponent implements OnInit {
     this.typeWriter();
     particlesJS.load('particles-js', 'assets/data/particles.json');
     window.addEventListener('scroll', this.animationOnScroll);
-    //window.addEventListener('scroll', this.animationOnScroll, true);
-    //window.addEventListener('scroll', this.scroll, true);
-    //window.addEventListener('scroll', this.scroll2, true);
   }
-
-/*
-  scroll2 = (event): void => {
-    this.backAllToInitialColor();
-    if(window.scrollY >= 0 && window.scrollY < 700 ){
-      document.getElementById('menu_1').style.color = "green";
-      if(this.currentSection != 1) this.currentSection = 1;
-    }  else if(window.scrollY >= 700 && window.scrollY < 1800){
-      document.getElementById('menu_2').style.color = "green";
-      if(this.currentSection != 2) this.currentSection = 2;
-    } else if(window.scrollY >= 1800 && window.scrollY < 4350){
-      document.getElementById('menu_3').style.color = "green";
-      if(this.currentSection != 3) this.currentSection = 3;
-    } else if(window.scrollY >= 4350){
-      document.getElementById('menu_4').style.color = "green";
-      if(this.currentSection != 4) this.currentSection = 4;
-    }
-  }
-*/
 
   typeWriter() {
     if (this.index < this.msg_introduction.length) {
@@ -90,16 +68,6 @@ export class AppComponent implements OnInit {
     document.getElementById('menu_4').style.color = actualColor;
   }
 
- /*
-  scroll = (event): void => {
-    if(window.scrollY > 0 && document.getElementById('nav').className != 'scroll'){
-      document.getElementById('nav').className = 'scroll';
-    } 
-    else if(window.scrollY == 0 && document.getElementById('nav').className == 'scroll'){
-      document.getElementById('nav').className = '';
-    }
-  };  
-*/
   hamburger(){
     if(document.getElementById('nav-ul').className != 'true'){
       document.getElementById('nav-ul').className = 'true';
@@ -109,7 +77,6 @@ export class AppComponent implements OnInit {
       document.getElementById('nav-ul').className = 'false';
       this.menu = "Ouvrir";
     }
-   
   }
 
   moveToSection(sectionNumber){
@@ -123,8 +90,6 @@ export class AppComponent implements OnInit {
 
 
   animationOnScroll = (event): void => {
-    //console.log(window.scrollY);
-
     /* navbar fixed on scroll */
     if(window.scrollY > 0 && document.getElementById('nav').className != 'scroll'){
       document.getElementById('nav').className = 'scroll';
@@ -150,8 +115,6 @@ export class AppComponent implements OnInit {
       if(this.currentSection != 4) this.currentSection = 4;
     }
     /* category selected end */
-
-
 
     /**section skills */
     if(!this.animationActiveSection[0]){
@@ -189,7 +152,6 @@ export class AppComponent implements OnInit {
       }
     }
     /**section skills end*/
-
 
     /**section projects */
     /*1*/
@@ -270,11 +232,5 @@ export class AppComponent implements OnInit {
     }
     /**section contact end*/
   }
-
-
-
-
-
-
 
 }

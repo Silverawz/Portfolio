@@ -1,4 +1,5 @@
 <header>
+  <!-- Navbar -->
   <nav id="nav">
       <div class="hamburger">
          <a (click)="hamburger()">{{menu}}</a>
@@ -6,7 +7,6 @@
       <div class="logo">N. D.</div>
       <div class="menu">
           <ul id="nav-ul" class="false">
-             <!-- <li><a href="https://deroussenicolas.fr/#accueil">Accueil</a></li>-->
               <li><a (click)="moveToSection(1)" [style.color]="color" on-mouseover='over(1)' (mouseout)='out(1)' id="menu_1">Accueil</a></li>
               <li><a (click)="moveToSection(2)" [style.color]="color" on-mouseover='over(2)' (mouseout)='out(2)' id="menu_2">Compétences</a></li>
               <li><a (click)="moveToSection(3)" [style.color]="color" on-mouseover='over(3)' (mouseout)='out(3)' id="menu_3">Projets</a></li>
@@ -14,278 +14,229 @@
           </ul>
       </div>
   </nav>
+  <!-- Navbar -->
 </header>
 
 <!-- Container-->
 <div id="container">
 
 
-<!-- Particles -->
-<div id="particles-js">
-</div>
-<!-- Particles -->
-
-
-<!-- Home -->
-<section id="home">
-
-  <h2 class="message"></h2>
-  <div class="message2_container">
-    <h4 class="message2">Développeur Java/Web Junior Full-stack passionné depuis toujours par les nouvelles technologies</h4>
+  <!-- Particles -->
+  <div id="particles-js">
   </div>
-  <!--
-  <h2 class="bump_letter">
-    <div class="container_span_bump_letter">
-    <span id="T_01">l</span><span id="T_02">o</span><span id="T_03">l</span><span id="T_04">o</span>
-  </div>
-
-  </h2>-->
-
-  <!--    Passionné depuis toujours par les nouvelles technologies,  je suis un  développeur Java/Web Full-stack orienté  en Back-end
-
-  <h2 class="message3">
-    
-    <div class="container_msg">
-
-      <span>P</span><span>a</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span><span>n</span>
-      <span>é</span>&nbsp;<span>d</span><span>e</span><span>p</span><span>u</span><span>i</span><span>s</span>&nbsp;<span>t</span>
-      <span>o</span><span>u</span><span>j</span><span>o</span><span>u</span><span>r</span><span>s</span>&nbsp;<span>p</span>
-      <span>a</span><span>r</span>&nbsp;<span>l</span><span>e</span><span>s</span>&nbsp;<span>n</span><span>o</span><span>u</span>
-      <span>v</span><span>e</span><span>l</span><span>l</span><span>e</span><span>s</span>&nbsp;<span>t</span><span>e</span>
-      <span>c</span><span>h</span><span>n</span><span>o</span><span>l</span><span>o</span><span>g</span><span>i</span>
-      <span>e</span><span>s</span><span>,</span>&nbsp;
-      <span>j</span><span>e</span>&nbsp;<span>s</span><span>u</span><span>i</span><span>s</span>&nbsp;<span>u</span><span>n</span>
-      &nbsp;<span>d</span><span>é</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>p</span>
-      <span>e</span><span>u</span><span>r</span>&nbsp;<span>J</span><span>a</span><span>v</span><span>a</span><span>/</span>
-      <span>W</span><span>e</span><span>b</span>&nbsp;<span>F</span><span>u</span><span>l</span><span>l</span><span>-</span> 
-      <span>s</span><span>t</span><span>a</span><span>c</span><span>k</span><span>&nbsp;</span><span>o</span><span>r</span>
-      <span>i</span><span>e</span><span>n</span><span>t</span><span>é</span>&nbsp;
-      <span>e</span><span>n</span>&nbsp;<span>B</span><span>a</span><span>c</span><span>k</span><span>-</span><span>e</span><span>n</span><span>d</span>
-
-    </div>
-  </h2>
-  <div class="link_cv" style="color:white">Accéder à mon <a class="btn_github" href="https://github.com/Silverawz/" type="button" target="_blank">CV</a></div>
--->
-  <!--Passionné depuis toujours par les nouvelles technologies,  je suis un  développeur Java/Web Full-stack orienté  en Back-end -->
-</section>
-<!-- Home -->
+  <!-- Particles -->
 
 
-<div id="skills"></div>
-<!-- transition effect section -->
-<div class="transition_1"></div>
-<div class="transition_2"></div>
-<div class="transition_3"></div>
-<!-- transition effect section -->
+  <!-- Home -->
+  <section id="home">
 
-
-
-  <!-- Skills -->
-  <section id="skills_">
-
-      <ul id="skills_title">
-        <li>C</li>
-        <li>O</li>
-        <li>M</li>
-        <li>P</li>
-        <li>E</li>
-        <li>T</li>
-        <li>E</li>
-        <li>N</li>
-        <li>C</li>
-        <li>E</li>
-        <li>S</li>
-      </ul>
-    
-    <div class="container_skills">
-
-      <!--title 1 : front -->
-      <div class="item">
-        <div class="container_skills_1">
-        <h3>Front-end</h3>
-        </div>
-      </div>
-
-      <!--title 2 : back -->
-      <div class="item">
-        <div class="container_skills_2">          
-        <h3>Back-end</h3>
-        </div>
-      </div>
-
-      <!--title 3 : tools -->
-      <div class="item"><div class="container_skills_3">          
-        <h3>Outils</h3>
-        </div>
-      </div>
-
-      <!--placeholder -->
-      <div class="item2"></div>
-      <div class="item2"></div>
-      <div class="item2"></div>
-
-      <!-- description 1-->
-      <div class="item1" id="description_1">  
-        <p class="description_1_items">HTML</p>        
-        <p class="description_1_items">CSS</p>
-        <p class="description_1_items">Javascript</p>
-        <p class="description_1_items">Bootstrap</p>
-        <p class="description_1_items">Thymeleaf</p>
-        <p class="description_1_items">Angular</p>    
-      </div>
-
-      <!-- description 2-->
-      <div class="item1" id="description_2">
-        <p class="description_2_items">JAVA EE</p>
-        <p class="description_2_items">Spring</p>
-        <p class="description_2_items">Hibernate</p>
-        <p class="description_2_items">Maven</p>
-        <p class="description_2_items">Postgresql</p>
-        <p class="description_2_items">MySQL</p> 
-      </div>
-
-      <!-- description 3-->
-      <div class="item1" id="description_3">
-        <p class="description_3_items">Git</p>
-        <p class="description_3_items">GitHub</p>
-        <p class="description_3_items">Gitlab</p>
-        <p class="description_3_items">Jenkins</p>
-        <p class="description_3_items">AWS</p>
-        <p class="description_3_items">Postman</p>
-        <p class="description_3_items">Firebase</p>
-        <p class="description_3_items">Docker</p>
-      </div>
-
-      <!--image 1 -->
-      <div class="item">
-        <div id="img_skills_1">
-        </div>
-      </div>
-
-      <!--image 2 -->
-      <div class="item">
-        <div id="img_skills_2">
-        </div>
-      </div> 
-
-      <!--image 3 -->
-      <div class="item">
-        <div id="img_skills_3">
-        </div>
-      </div>
-
+    <h2 class="message"></h2>
+    <div class="message2_container">
+      <h4 class="message2">Développeur Java/Web Junior Full-stack passionné depuis toujours par les nouvelles technologies</h4>
     </div>
 
   </section>
-  <!-- Skills -->
-
-<!-- transition effect section -->
-<div class="transition_3"></div>
-<div class="transition_2"></div>
-<div class="transition_1"></div>
-<!-- transition effect section -->
-
-<!-- Projects -->
-<section id="projects">
-  <ul id="projects_title">
-    <li>P</li>
-    <li>R</li>
-    <li>O</li>
-    <li>J</li>
-    <li>E</li>
-    <li>T</li>
-    <li>S</li>
-  </ul>
-
-  <div class="container_cards">
+  <!-- Home -->
 
 
-    <div class="title_card" id="title_card_1">Site web pour associations sportives (API REST)</div>
-    <div class="card_odd">
-        <!--<div class="image_card_odd1"></div>-->
-        <div class="description_card_1">
-          <p>Le site permet aux associations sportives de <strong>diffuser des articles d'informations</strong> pour les visiteurs et de <strong>créer/modifier des articles par les modérateurs ou admin.</strong></p>   
-          <p>Liste des fonctionnalités implémentées : <strong>[ Créer un compte ], [ Accéder un compte ], [ Modifier un compte ], [ Parcourir les articles ], 
-            [ Créer un article ], [ Modifier un article ], [ Parcourir le forum ]</strong></p>     
-          <p><strong>Technologies utilisées</strong> : JavaEE, Spring - Angular, Typescript, Html, Css - MySQL - Git</p>
+  <div id="skills"></div>
+  <!-- transition effect section -->
+  <div class="transition_1"></div>
+  <div class="transition_2"></div>
+  <div class="transition_3"></div>
+  <!-- transition effect section -->
+
+
+
+    <!-- Skills -->
+    <section id="skills_">
+
+        <ul id="skills_title">
+          <li>C</li>
+          <li>O</li>
+          <li>M</li>
+          <li>P</li>
+          <li>E</li>
+          <li>T</li>
+          <li>E</li>
+          <li>N</li>
+          <li>C</li>
+          <li>E</li>
+          <li>S</li>
+        </ul>
+      
+      <div class="container_skills">
+
+        <!--title 1 : front -->
+        <div class="item">
+          <div class="container_skills_1">
+          <h3>Front-end</h3>
+          </div>
         </div>
-        <div class="image_card_odd_1"></div>
-    </div>
-    <div class="link_github"><a class="btn_card" href="https://github.com/Silverawz/P12" type="button" target="_blank">Lien du projet</a></div>
 
-    <div class="separator1"></div>
-
-  <div class="container_card_2">
-
-    <div class="title_card" id="title_card_2">Site d'une bibliotheque (API REST)</div>
-    <div class="card_even">
-        <div class="image_card_even"></div>
-        <div class="description_card_even">
-          <p>Un site permettant aux usagers de <strong>voir les exemplaires disponibles et de les réserver</strong>. L'API back possède un <strong>batch automatique d'envoi de mail</strong> en cas de date de réservation dépassée.</p>        
-          <p>Liste des fonctionnalités implémentées : <strong> [ Accéder un compte ], [ Parcourir la liste des exemplaires ], [ Réserver un exemplaire ], [ Annuler une réservation d'exemplaire ]</strong></p>
-          <p><strong>Technologies utilisées</strong> : JavaEE, Spring - Html, Css, Bootstrap - MySQL - Git</p>
+        <!--title 2 : back -->
+        <div class="item">
+          <div class="container_skills_2">          
+          <h3>Back-end</h3>
+          </div>
         </div>
-    </div>
-    <div class="link_github"><a class="btn_card_even" href="https://github.com/Silverawz/p10" type="button" target="_blank">Lien du projet</a></div>
 
-  </div>
-
-    <div class="separator2"></div>
-  <div class="container_card_3">
-    <div class="title_card" id="title_card_3">Test unitaire & intégration d'une application de comptabilité</div>
-    <div class="card_odd">
-        <div class="description_card_3" id="second_odd_desc">
-          <p>L'application de comptabilité tourne avec <strong>Java 8 et Spring en configuration XML</strong>. La base de données <strong>PostgreSQL est générée grâce à Docker</strong>.</p> 
-          <p><strong>Travail éffectué </strong> : Ajout de la méthode addReferece(), correction de bugs et erreurs. <strong>Réalisation de tests unitaires</strong> et utilisation de l'<strong>intégration continue</strong> avec Jenkins. 
-            <strong>Code coverage 75%</strong> sur l'ensemble de l'application.</p>
-          <p><strong>Technologies utilisées</strong> : JavaEE 8, Spring - Docker - PostgreSQL - Git - Jenkins</p>
+        <!--title 3 : tools -->
+        <div class="item"><div class="container_skills_3">          
+          <h3>Outils</h3>
+          </div>
         </div>
-        <div class="image_card_odd_2"></div>
-    </div>
-    <div class="link_github"><a class="btn_card" href="https://github.com/Silverawz/projet-9" type="button" target="_blank" id="second_odd_link">Lien du projet</a></div>
-  </div>
-  <div class="separator3"></div>
-</div>
 
+        <!--placeholder -->
+        <div class="item2"></div>
+        <div class="item2"></div>
+        <div class="item2"></div>
 
-</section>
-<!-- Projects -->
+        <!-- description 1-->
+        <div class="item1" id="description_1">  
+          <p class="description_1_items">HTML</p>        
+          <p class="description_1_items">CSS</p>
+          <p class="description_1_items">Javascript</p>
+          <p class="description_1_items">Bootstrap</p>
+          <p class="description_1_items">Thymeleaf</p>
+          <p class="description_1_items">Angular</p>    
+        </div>
 
+        <!-- description 2-->
+        <div class="item1" id="description_2">
+          <p class="description_2_items">JAVA EE</p>
+          <p class="description_2_items">Spring</p>
+          <p class="description_2_items">Hibernate</p>
+          <p class="description_2_items">Maven</p>
+          <p class="description_2_items">Postgresql</p>
+          <p class="description_2_items">MySQL</p> 
+        </div>
 
+        <!-- description 3-->
+        <div class="item1" id="description_3">
+          <p class="description_3_items">Git</p>
+          <p class="description_3_items">GitHub</p>
+          <p class="description_3_items">Gitlab</p>
+          <p class="description_3_items">Jenkins</p>
+          <p class="description_3_items">AWS</p>
+          <p class="description_3_items">Postman</p>
+          <p class="description_3_items">Firebase</p>
+          <p class="description_3_items">Docker</p>
+        </div>
 
+        <!--image 1 -->
+        <div class="item">
+          <div id="img_skills_1">
+          </div>
+        </div>
 
+        <!--image 2 -->
+        <div class="item">
+          <div id="img_skills_2">
+          </div>
+        </div> 
 
+        <!--image 3 -->
+        <div class="item">
+          <div id="img_skills_3">
+          </div>
+        </div>
 
+      </div>
 
-
-
-
-
-
-
-
-
-<!-- Contact -->
-<section id="contact">
-
-  <h4><span id="span1">C</span><span id="span2">o</span><span id="span3">n</span><span id="span4">t</span><span id="span5">a</span><span id="span6">c</span><span id="span7">t</span></h4>
-  <div class="contact_container">
-    <p>
-      Merci pour votre visite!
-    </p>
-    <p>
-      Vous souhaitez me contacter ? Dans ce cas vous pouvez m'envoyer un mail à l'adresse <a class="mailto" href="mailto:deroussenicolas@gmail.com">deroussenicolas@gmail.com</a> et je veillerai à vous répondre dans les plus brefs délais.
-    </p>
-    <p>
-      Vous pouvez également me retrouver sur les sites suivants 
-    </p>
-    <p>
-      <a class="btn_linkedin" href="https://www.linkedin.com/in/nicolas-deroussen-604145186/" type="button" target="_blank">Linkedin</a>&nbsp;
-      <a class="btn_github" href="https://github.com/Silverawz/" type="button" target="_blank">Github</a>
-    </p>
-  </div>
     </section>
-<!-- Contact -->
+    <!-- Skills -->
+
+  <!-- transition effect section -->
+  <div class="transition_3"></div>
+  <div class="transition_2"></div>
+  <div class="transition_1"></div>
+  <!-- transition effect section -->
+
+  <!-- Projects -->
+  <section id="projects">
+    <ul id="projects_title">
+      <li>P</li>
+      <li>R</li>
+      <li>O</li>
+      <li>J</li>
+      <li>E</li>
+      <li>T</li>
+      <li>S</li>
+    </ul>
+
+    <div class="container_cards">
+
+
+      <div class="title_card" id="title_card_1">Site web pour associations sportives (API REST)</div>
+      <div class="card_odd">
+          <div class="description_card_1">
+            <p>Le site permet aux associations sportives de <strong>diffuser des articles d'informations</strong> pour les visiteurs et de <strong>créer/modifier des articles par les modérateurs ou admin.</strong></p>   
+            <p>Liste des fonctionnalités implémentées : <strong>[ Créer un compte ], [ Accéder un compte ], [ Modifier un compte ], [ Parcourir les articles ], 
+              [ Créer un article ], [ Modifier un article ], [ Parcourir le forum ]</strong></p>     
+            <p><strong>Technologies utilisées</strong> : JavaEE, Spring - Angular, Typescript, Html, Css - MySQL - Git</p>
+          </div>
+          <div class="image_card_odd_1"></div>
+      </div>
+      <div class="link_github"><a class="btn_card" href="https://github.com/Silverawz/P12" type="button" target="_blank">Lien du projet</a></div>
+
+      <div class="separator1"></div>
+
+    <div class="container_card_2">
+
+      <div class="title_card" id="title_card_2">Site d'une bibliotheque (API REST)</div>
+      <div class="card_even">
+          <div class="image_card_even"></div>
+          <div class="description_card_even">
+            <p>Un site permettant aux usagers de <strong>voir les exemplaires disponibles et de les réserver</strong>. L'API back possède un <strong>batch automatique d'envoi de mail</strong> en cas de date de réservation dépassée.</p>        
+            <p>Liste des fonctionnalités implémentées : <strong> [ Accéder un compte ], [ Parcourir la liste des exemplaires ], [ Réserver un exemplaire ], [ Annuler une réservation d'exemplaire ]</strong></p>
+            <p><strong>Technologies utilisées</strong> : JavaEE, Spring - Html, Css, Bootstrap - MySQL - Git</p>
+          </div>
+      </div>
+      <div class="link_github"><a class="btn_card_even" href="https://github.com/Silverawz/p10" type="button" target="_blank">Lien du projet</a></div>
+
+    </div>
+
+        <div class="separator2"></div>
+      <div class="container_card_3">
+        <div class="title_card" id="title_card_3">Test unitaire & intégration d'une application de comptabilité</div>
+        <div class="card_odd">
+            <div class="description_card_3" id="second_odd_desc">
+              <p>L'application de comptabilité tourne avec <strong>Java 8 et Spring en configuration XML</strong>. La base de données <strong>PostgreSQL est générée grâce à Docker</strong>.</p> 
+              <p><strong>Travail éffectué </strong> : Ajout de la méthode addReferece(), correction de bugs et erreurs. <strong>Réalisation de tests unitaires</strong> et utilisation de l'<strong>intégration continue</strong> avec Jenkins. 
+                <strong>Code coverage 75%</strong> sur l'ensemble de l'application.</p>
+              <p><strong>Technologies utilisées</strong> : JavaEE 8, Spring - Docker - PostgreSQL - Git - Jenkins</p>
+            </div>
+            <div class="image_card_odd_2"></div>
+        </div>
+        <div class="link_github"><a class="btn_card" href="https://github.com/Silverawz/projet-9" type="button" target="_blank" id="second_odd_link">Lien du projet</a></div>
+      </div>
+        <div class="separator3"></div>
+    </div>
+  </section>
+  <!-- Projects -->
+
+  <!-- Contact -->
+  <section id="contact">
+
+    <h4><span id="span1">C</span><span id="span2">o</span><span id="span3">n</span><span id="span4">t</span><span id="span5">a</span><span id="span6">c</span><span id="span7">t</span></h4>
+    <div class="contact_container">
+      <p>
+        Merci pour votre visite!
+      </p>
+      <p>
+        Vous souhaitez me contacter ? Dans ce cas vous pouvez m'envoyer un mail à l'adresse <a class="mailto" href="mailto:deroussenicolas@gmail.com">deroussenicolas@gmail.com</a> et je veillerai à vous répondre dans les plus brefs délais.
+      </p>
+      <p>
+        Vous pouvez également me retrouver sur les sites suivants 
+      </p>
+      <p>
+        <a class="btn_linkedin" href="https://www.linkedin.com/in/nicolas-deroussen-604145186/" type="button" target="_blank">Linkedin</a>&nbsp;
+        <a class="btn_github" href="https://github.com/Silverawz/" type="button" target="_blank">Github</a>
+      </p>
+    </div>
+      </section>
+  <!-- Contact -->
 
 </div>
 <!-- Container-->
